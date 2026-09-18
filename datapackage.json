@@ -11,7 +11,7 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:3e3aa50b1ead2cf9332cdf9bfcd3a7b4df863bcde610ae6634034e61f7c35e94",
+      "hash": "sha256:d1016957121dc09d016a73f67fba01e32c7960bbe3151803f0d7a18cb8152459",
       "bytes": 104189,
       "fields": 22,
       "rows": 6477,
@@ -83,7 +83,7 @@
             "name": "poder_cod",
             "type": "string",
             "title": "Poder Unidade Orçamentária - Código",
-            "description": "Código indicativo do Poder no qual a unidade orçamentária está incluída.\n",
+            "description": "Código indicativo do Poder no qual a unidade orçamentária está incluída.\nRefere-se a designação das orgãos e entidades segregados de acordo com suas funções e atribuições no setor público, a saber:\n(a) Poder Executivo.\n(b) Poder Judiciário.\n(c) Poder Legislativo.\n(d) Ministério Pùblico.\n(e) Tribunal de Contas\n(f) Defensoria Pública.\n",
             "constraints": {
               "pattern": "^[1-6]$"
             }
@@ -102,7 +102,7 @@
             "name": "funcao_cod",
             "type": "string",
             "title": "Função - Código",
-            "description": "Código identificador do nível máximo de agregação das ações do Governo.\n",
+            "description": "Código identificador do nível máximo de agregação das ações do Governo.\nTem como objetivo consolidar em que áreas de atuação do setor público são gastos os recursos orçamentários, tendo como critério a natureza do objeto da ação.\nPortanto, visa a agregar ações que tenham objetos correlatos.\nUm programa pode ter ações atreladas a distintas funções, assim como uma unidade orçamentária, mas cada ação só pode ter uma única função.\n",
             "constraints": {
               "pattern": "^\\d{1,2}$"
             }
@@ -111,7 +111,7 @@
             "name": "programa_cod",
             "type": "string",
             "title": "Programa - Código",
-            "description": "Código identificador do objeto concreto, bem ou serviço que se quer atingir.\n",
+            "description": "Código identificador do objeto concreto, bem ou serviço que se quer atingir.\nO programa representa uma política pública que visa o enfrentamento de um problema ou oportunidade, sendo mensurado por indicadores.\n",
             "constraints": {
               "pattern": "^\\d{1,3}$"
             }
@@ -133,7 +133,7 @@
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
-            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
               "pattern": "^([1-6]|9)$"
             }
@@ -164,7 +164,7 @@
             "name": "fonte_cod",
             "type": "string",
             "title": "Fonte Recurso - Código",
-            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "description": "Código referente à fonte dos recursos financeiros.\nIdentifica a origem e natureza dos recursos orçamentários através de código e é utilizada para indicar que espécies de recursos irão financiar as despesas.\n",
             "constraints": {
               "required": true,
               "pattern": "^(0|[1-9]\\d{0,1})$"
@@ -174,7 +174,7 @@
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
-            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
             "constraints": {
               "pattern": "^\\d{1}$"
             }
@@ -242,7 +242,7 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:06ea05a045173b31fea711e05d41353750a0078bb78bd3159390ffe5f74e3d4b",
+      "hash": "sha256:f7597c50c6da454fff3b78732b25cde06fc93b732fdf8132e74d817d3195979d",
       "bytes": 418498,
       "fields": 19,
       "rows": 28475,
@@ -267,7 +267,7 @@
             "name": "poder_cod",
             "type": "string",
             "title": "Poder Unidade Orçamentária - Código",
-            "description": "Código indicativo do Poder no qual a unidade orçamentária está incluída.\n",
+            "description": "Código indicativo do Poder no qual a unidade orçamentária está incluída.\nRefere-se a designação das orgãos e entidades segregados de acordo com suas funções e atribuições no setor público, a saber:\n(a) Poder Executivo.\n(b) Poder Judiciário.\n(c) Poder Legislativo.\n(d) Ministério Pùblico.\n(e) Tribunal de Contas\n(f) Defensoria Pública.\n",
             "constraints": {
               "pattern": "^[1-6]$"
             }
@@ -308,7 +308,7 @@
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
-            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
               "pattern": "^([1-6]|9)$"
             }
@@ -339,7 +339,7 @@
             "name": "fonte_cod",
             "type": "string",
             "title": "Fonte Recurso - Código",
-            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "description": "Código referente à fonte dos recursos financeiros.\nIdentifica a origem e natureza dos recursos orçamentários através de código e é utilizada para indicar que espécies de recursos irão financiar as despesas.\n",
             "constraints": {
               "required": true,
               "pattern": "^(0|[1-9]\\d{0,1})$"
@@ -349,7 +349,7 @@
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
-            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
             "constraints": {
               "pattern": "^\\d{1}$"
             }
@@ -449,8 +449,8 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:854f65449bd31dac9e3ef38dac2c340428cb8b39e2ed3505893f4fd4619994af",
-      "bytes": 51374,
+      "hash": "sha256:c0d3ca6acc2193ebd8b108d8321eac2f24a5112b70bfc49ef3ddc13083a78c9d",
+      "bytes": 51507,
       "fields": 14,
       "rows": 3227,
       "dialect": {
@@ -484,7 +484,7 @@
             "name": "funcao_cod",
             "type": "string",
             "title": "Função - Código",
-            "description": "Código identificador do nível máximo de agregação das ações do Governo.\n",
+            "description": "Código identificador do nível máximo de agregação das ações do Governo.\nTem como objetivo consolidar em que áreas de atuação do setor público são gastos os recursos orçamentários, tendo como critério a natureza do objeto da ação.\nPortanto, visa a agregar ações que tenham objetos correlatos.\nUm programa pode ter ações atreladas a distintas funções, assim como uma unidade orçamentária, mas cada ação só pode ter uma única função.\n",
             "constraints": {
               "pattern": "^\\d{1,2}$"
             }
@@ -493,7 +493,7 @@
             "name": "subfuncao_cod",
             "type": "string",
             "title": "Subfunção - Código",
-            "description": "Código de identificador do detalhamento das áreas de atuação do Governo.\n",
+            "description": "Código de identificador do detalhamento das áreas de atuação do Governo.\nRepresenta uma partição da função, visando agregar determinado subconjunto de despesas do setor público.\nIdentifica a natureza básica das ações que se aglutinam em torno das funções.\nAs subfunções poderão ser combinadas com funções diferentes daquelas a que estão relacionadas no rol fixado pela Portaria Ministerial n. o 42/99.\nTal como ocorre com a função, o critério que preside a definição da subfunção é a natureza do objeto da ação.\n",
             "constraints": {
               "pattern": "^\\d{1,3}$"
             }
@@ -502,7 +502,7 @@
             "name": "programa_cod",
             "type": "string",
             "title": "Programa - Código",
-            "description": "Código identificador do objeto concreto, bem ou serviço que se quer atingir.\n",
+            "description": "Código identificador do objeto concreto, bem ou serviço que se quer atingir.\nO programa representa uma política pública que visa o enfrentamento de um problema ou oportunidade, sendo mensurado por indicadores.\n",
             "constraints": {
               "pattern": "^\\d{1,3}$"
             }
@@ -524,7 +524,7 @@
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
-            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
               "pattern": "^([1-6]|9)$"
             }
@@ -555,7 +555,7 @@
             "name": "fonte_cod",
             "type": "string",
             "title": "Fonte Recurso - Código",
-            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "description": "Código referente à fonte dos recursos financeiros.\nIdentifica a origem e natureza dos recursos orçamentários através de código e é utilizada para indicar que espécies de recursos irão financiar as despesas.\n",
             "constraints": {
               "required": true,
               "pattern": "^(0|[1-9]\\d{0,1})$"
@@ -565,7 +565,7 @@
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
-            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
             "constraints": {
               "pattern": "^\\d{1}$"
             }
@@ -606,8 +606,8 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:98e7c3313620d3438eda39f8dff8ac34c39cf5ded7e90141a00047b65c06ed55",
-      "bytes": 28711299,
+      "hash": "sha256:275894c7566eb7ddf68d7d6989d7bbce986c6148b2e153a029d210ae64ef191d",
+      "bytes": 28711348,
       "fields": 30,
       "rows": 820261,
       "dialect": {
@@ -659,7 +659,7 @@
             "name": "upg_cod",
             "type": "string",
             "title": "Unidade Programação Gasto - Código",
-            "description": "Código de unidade de programação de gasto relacionado com o código de controle interno da unidade administrativa,\nde acordo com tabela elaborada pela Unidade Orçamentária.\n",
+            "description": "Código de unidade de programação de gasto relacionado com o código de controle interno da unidade administrativa,\nde acordo com tabela elaborada pela Unidade Orçamentária.\nNão há uma padronização da utilização da UPG por todos os orgãos, alguns utilizam para identificação do centro de custo, outros utilizam para identificar objetos de gasto e outros para identificação das unidades que realizam a despesa.\n",
             "constraints": {
               "pattern": "^(0|[1-9]\\d{0,3})$"
             }
@@ -668,7 +668,7 @@
             "name": "uo_fin_cod",
             "type": "string",
             "title": "Unidade Orçamentária Financiadora Gasto - Código",
-            "description": "Código de unidade orçamentária financiadora das despesas referentes à procedência de recursos.\n",
+            "description": "Código de unidade orçamentária que financia despesas de outro orgão por meio do repasse da receita arrecadada.\n",
             "constraints": {
               "pattern": "^(0|[1-9]\\d{3})$"
             }
@@ -677,7 +677,7 @@
             "name": "funcao_cod",
             "type": "string",
             "title": "Função - Código",
-            "description": "Código identificador do nível máximo de agregação das ações do Governo.\n",
+            "description": "Código identificador do nível máximo de agregação das ações do Governo.\nTem como objetivo consolidar em que áreas de atuação do setor público são gastos os recursos orçamentários, tendo como critério a natureza do objeto da ação.\nPortanto, visa a agregar ações que tenham objetos correlatos.\nUm programa pode ter ações atreladas a distintas funções, assim como uma unidade orçamentária, mas cada ação só pode ter uma única função.\n",
             "constraints": {
               "pattern": "^\\d{1,2}$"
             }
@@ -686,7 +686,7 @@
             "name": "subfuncao_cod",
             "type": "string",
             "title": "Subfunção - Código",
-            "description": "Código de identificador do detalhamento das áreas de atuação do Governo.\n",
+            "description": "Código de identificador do detalhamento das áreas de atuação do Governo.\nRepresenta uma partição da função, visando agregar determinado subconjunto de despesas do setor público.\nIdentifica a natureza básica das ações que se aglutinam em torno das funções.\nAs subfunções poderão ser combinadas com funções diferentes daquelas a que estão relacionadas no rol fixado pela Portaria Ministerial n. o 42/99.\nTal como ocorre com a função, o critério que preside a definição da subfunção é a natureza do objeto da ação.\n",
             "constraints": {
               "pattern": "^\\d{1,3}$"
             }
@@ -695,7 +695,7 @@
             "name": "programa_cod",
             "type": "string",
             "title": "Programa - Código",
-            "description": "Código identificador do objeto concreto, bem ou serviço que se quer atingir.\n",
+            "description": "Código identificador do objeto concreto, bem ou serviço que se quer atingir.\nO programa representa uma política pública que visa o enfrentamento de um problema ou oportunidade, sendo mensurado por indicadores.\n",
             "constraints": {
               "pattern": "^\\d{1,3}$"
             }
@@ -717,7 +717,7 @@
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
-            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
               "pattern": "^([1-6]|9)$"
             }
@@ -748,7 +748,7 @@
             "name": "fonte_cod",
             "type": "string",
             "title": "Fonte Recurso - Código",
-            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "description": "Código referente à fonte dos recursos financeiros.\nIdentifica a origem e natureza dos recursos orçamentários através de código e é utilizada para indicar que espécies de recursos irão financiar as despesas.\n",
             "constraints": {
               "required": true,
               "pattern": "^(0|[1-9]\\d{0,1})$"
@@ -758,7 +758,7 @@
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
-            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
             "constraints": {
               "pattern": "^\\d{1}$"
             }
@@ -913,7 +913,7 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:c3cb79065578ff7cce07a84f5fe5aa0ec23ebf6fd7ed599b56b9d0c5f8a9cfa5",
+      "hash": "sha256:805ef005480610e1656091c3e1ba30a31815b655639d6850d5f78fdcebea7ddb",
       "bytes": 2084,
       "fields": 16,
       "rows": 172,
@@ -975,7 +975,7 @@
             "name": "funcao_cod",
             "type": "string",
             "title": "Função - Código",
-            "description": "Código identificador do nível máximo de agregação das ações do Governo.\n",
+            "description": "Código identificador do nível máximo de agregação das ações do Governo.\nTem como objetivo consolidar em que áreas de atuação do setor público são gastos os recursos orçamentários, tendo como critério a natureza do objeto da ação.\nPortanto, visa a agregar ações que tenham objetos correlatos.\nUm programa pode ter ações atreladas a distintas funções, assim como uma unidade orçamentária, mas cada ação só pode ter uma única função.\n",
             "constraints": {
               "pattern": "^\\d{1,2}$"
             }
@@ -997,7 +997,7 @@
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
-            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
               "pattern": "^([1-6]|9)$"
             }
@@ -1028,7 +1028,7 @@
             "name": "fonte_cod",
             "type": "string",
             "title": "Fonte Recurso - Código",
-            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "description": "Código referente à fonte dos recursos financeiros.\nIdentifica a origem e natureza dos recursos orçamentários através de código e é utilizada para indicar que espécies de recursos irão financiar as despesas.\n",
             "constraints": {
               "required": true,
               "pattern": "^(0|[1-9]\\d{0,1})$"
@@ -1038,7 +1038,7 @@
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
-            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
             "constraints": {
               "pattern": "^\\d{1}$"
             }
@@ -1095,7 +1095,7 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:defc39b2588cdc1c80d254e1c70877bd20c8ab8b0c18c4832d892a474a5f089c",
+      "hash": "sha256:be3349eb91d5f2e9fda18c3a85274e5b08c91238c32dfdc9a330d16779ae9bd7",
       "bytes": 111125,
       "fields": 11,
       "rows": 7168,
@@ -1139,7 +1139,7 @@
             "name": "fonte_cod",
             "type": "string",
             "title": "Fonte Recurso - Código",
-            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "description": "Código referente à fonte dos recursos financeiros.\nIdentifica a origem e natureza dos recursos orçamentários através de código e é utilizada para indicar que espécies de recursos irão financiar as despesas.\n",
             "constraints": {
               "required": true,
               "pattern": "^(0|[1-9]\\d{0,1})$"
@@ -1209,8 +1209,8 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:36319c3f871116023aee445107b6f24af868dff31ac9269fa177a20c864156b9",
-      "bytes": 8408417,
+      "hash": "sha256:9d745f1270f12bbc25af628ac345a415c66c636c508ea9a1b7aa4ecb0b0affef",
+      "bytes": 9277311,
       "fields": 45,
       "rows": 212300,
       "dialect": {
@@ -1271,7 +1271,7 @@
             "name": "uo_fin_cod",
             "type": "string",
             "title": "Unidade Orçamentária Financiadora Gasto - Código",
-            "description": "Código de unidade orçamentária financiadora das despesas referentes à procedência de recursos.\n",
+            "description": "Código de unidade orçamentária que financia despesas de outro orgão por meio do repasse da receita arrecadada.\n",
             "constraints": {
               "pattern": "^(0|[1-9]\\d{3})$"
             }
@@ -1280,7 +1280,7 @@
             "name": "upg_cod",
             "type": "string",
             "title": "Unidade Programação Gasto - Código",
-            "description": "Código de unidade de programação de gasto relacionado com o código de controle interno da unidade administrativa,\nde acordo com tabela elaborada pela Unidade Orçamentária.\n",
+            "description": "Código de unidade de programação de gasto relacionado com o código de controle interno da unidade administrativa,\nde acordo com tabela elaborada pela Unidade Orçamentária.\nNão há uma padronização da utilização da UPG por todos os orgãos, alguns utilizam para identificação do centro de custo, outros utilizam para identificar objetos de gasto e outros para identificação das unidades que realizam a despesa.\n",
             "constraints": {
               "pattern": "^(0|[1-9]\\d{0,3})$"
             }
@@ -1289,7 +1289,7 @@
             "name": "funcao_cod",
             "type": "string",
             "title": "Função - Código",
-            "description": "Código identificador do nível máximo de agregação das ações do Governo.\n",
+            "description": "Código identificador do nível máximo de agregação das ações do Governo.\nTem como objetivo consolidar em que áreas de atuação do setor público são gastos os recursos orçamentários, tendo como critério a natureza do objeto da ação.\nPortanto, visa a agregar ações que tenham objetos correlatos.\nUm programa pode ter ações atreladas a distintas funções, assim como uma unidade orçamentária, mas cada ação só pode ter uma única função.\n",
             "constraints": {
               "pattern": "^\\d{1,2}$"
             }
@@ -1311,7 +1311,7 @@
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
-            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
               "pattern": "^([1-6]|9)$"
             }
@@ -1342,7 +1342,7 @@
             "name": "fonte_cod",
             "type": "string",
             "title": "Fonte Recurso - Código",
-            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "description": "Código referente à fonte dos recursos financeiros.\nIdentifica a origem e natureza dos recursos orçamentários através de código e é utilizada para indicar que espécies de recursos irão financiar as despesas.\n",
             "constraints": {
               "required": true,
               "pattern": "^(0|[1-9]\\d{0,1})$"
@@ -1352,7 +1352,7 @@
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
-            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
             "constraints": {
               "pattern": "^\\d{1}$"
             }
@@ -1643,8 +1643,8 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:aa3cda1f8bccab39ac74789388a02487924c8e9418f165b3e404a6fd1b88f42f",
-      "bytes": 8312,
+      "hash": "sha256:687c31ed50aeaa71ca748f4e7e550503e20f94c9b2d46ffb418cfdc9ccb151b6",
+      "bytes": 8306,
       "fields": 13,
       "rows": 784,
       "dialect": {
@@ -1696,7 +1696,7 @@
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
-            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
               "pattern": "^([1-6]|9)$"
             }
@@ -1727,7 +1727,7 @@
             "name": "fonte_cod",
             "type": "string",
             "title": "Fonte Recurso - Código",
-            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "description": "Código referente à fonte dos recursos financeiros.\nIdentifica a origem e natureza dos recursos orçamentários através de código e é utilizada para indicar que espécies de recursos irão financiar as despesas.\n",
             "constraints": {
               "required": true,
               "pattern": "^(0|[1-9]\\d{0,1})$"
@@ -1737,7 +1737,7 @@
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
-            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
             "constraints": {
               "pattern": "^\\d{1}$"
             }
@@ -1780,5 +1780,5 @@
     }
   ],
   "owner_org": "secretaria-de-estado-de-planejamento-e-gestao-seplag",
-  "updated_at": "2026-09-18T14:24:44"
+  "updated_at": "2026-09-18T17:05:03"
 }

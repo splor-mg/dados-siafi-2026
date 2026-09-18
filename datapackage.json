@@ -1,0 +1,1784 @@
+{
+  "name": "dados_siafi",
+  "title": "Sistema Integrado de Administração Financeira – SIAFI 2026",
+  "resources": [
+    {
+      "name": "alteracoes_orcamentarias",
+      "type": "table",
+      "path": "data/alteracoes_orcamentarias.csv.gz",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "gz",
+      "encoding": "utf-8",
+      "hash": "sha256:0a59a6b019684cbc90798c84f5c013a5c93755593509f78acaa75325e18edd17",
+      "bytes": 104189,
+      "fields": 22,
+      "rows": 6477,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "string",
+            "title": "Ano de Exercício",
+            "description": "Ano de exercício do orçamento fiscal.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "mes_cod",
+            "type": "string",
+            "title": "Mês",
+            "description": "Mês de registro do documento SIAFI\n",
+            "constraints": {
+              "pattern": "^([1-9]|1[0-4])$"
+            }
+          },
+          {
+            "name": "data_publicacao",
+            "type": "datetime",
+            "title": "Publicação Decreto Alteração Orçamentária",
+            "description": "Data completa de publicação do decreto de autorização da alteração orçamentária.\n",
+            "format": "%Y/%m/%d %H:%M:%S",
+            "constraints": {
+              "minimum": "2002/01/01 00:00:00"
+            }
+          },
+          {
+            "name": "data_registro",
+            "type": "datetime",
+            "title": "Data Registro Documento Alteração Orçamentária",
+            "description": "Data completa de registro do documento de alteração orçamentária.\n",
+            "format": "%Y/%m/%d %H:%M:%S",
+            "constraints": {
+              "minimum": "2002/01/01 00:00:00"
+            }
+          },
+          {
+            "name": "decreto_num",
+            "type": "string",
+            "title": "Decreto Alteração Orçamentária",
+            "description": "Número do decreto de autorização da alteração orçamentária, gerado pelo SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,2})$"
+            }
+          },
+          {
+            "name": "lei_aprovacao",
+            "type": "string",
+            "title": "Lei Aprovação Orçamento",
+            "description": "Número da lei de aprovação do Orçamento do Estado.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,4})$"
+            }
+          },
+          {
+            "name": "poder_cod",
+            "type": "string",
+            "title": "Poder Unidade Orçamentária - Código",
+            "description": "Código indicativo do Poder no qual a unidade orçamentária está incluída.\n",
+            "constraints": {
+              "pattern": "^[1-6]$"
+            }
+          },
+          {
+            "name": "uo_cod",
+            "type": "string",
+            "title": "Unidade Orçamentária - Código",
+            "description": "Código representativo da unidade orçamentária.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "funcao_cod",
+            "type": "string",
+            "title": "Função - Código",
+            "description": "Código identificador do nível máximo de agregação das ações do Governo.\n",
+            "constraints": {
+              "pattern": "^\\d{1,2}$"
+            }
+          },
+          {
+            "name": "programa_cod",
+            "type": "string",
+            "title": "Programa - Código",
+            "description": "Código identificador do objeto concreto, bem ou serviço que se quer atingir.\n",
+            "constraints": {
+              "pattern": "^\\d{1,3}$"
+            }
+          },
+          {
+            "name": "acao_cod",
+            "type": "string",
+            "title": "Ação - Código",
+            "description": "Código identificador do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental (atividade).\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "grupo_cod",
+            "type": "string",
+            "title": "Grupo Despesa - Código",
+            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "constraints": {
+              "pattern": "^([1-6]|9)$"
+            }
+          },
+          {
+            "name": "modalidade_cod",
+            "type": "string",
+            "title": "Modalidade Aplicação - Código",
+            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^\\d{2}$"
+            }
+          },
+          {
+            "name": "iag_cod",
+            "type": "string",
+            "title": "Identificador Orçamento - Código",
+            "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^[0-6]$"
+            }
+          },
+          {
+            "name": "fonte_cod",
+            "type": "string",
+            "title": "Fonte Recurso - Código",
+            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
+            "name": "ipu_cod",
+            "type": "string",
+            "title": "Procedência - Código",
+            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^\\d{1}$"
+            }
+          },
+          {
+            "name": "origem_credito_cod",
+            "type": "string",
+            "title": "Crédito Adicional - Código",
+            "description": "Código indicativo da origem do crédito adicional da alteração orçamentária.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,3})$"
+            }
+          },
+          {
+            "name": "origem_credito_desc",
+            "type": "string",
+            "title": "Crédito Adicional - Descrição",
+            "description": "Descrição da origem do crédito adicional da alteração orçamentária.\n",
+            "constraints": {
+              "maxLength": 500
+            }
+          },
+          {
+            "name": "vlr_suplementacao",
+            "type": "number",
+            "title": "Valor Suplementação",
+            "description": "Valor, em reais, destinado a reforço de dotação orçamentária.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_anulacao",
+            "type": "number",
+            "title": "Valor Anulação Crédito",
+            "description": "Valor, em reais, da anulação de crédito na dotação orçamentária.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_credito_inicial",
+            "type": "number",
+            "title": "Valor Crédito Inicial",
+            "description": "Valor, em reais, do crédito orçamentário aprovado pela Lei Orçamentária.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_credito_autorizado",
+            "type": "number",
+            "title": "Valor Crédito Autorizado",
+            "description": "Valor total, em reais, correspondente ao somatório dos créditos disponíveis para a execução da despesa.\n"
+          }
+        ]
+      }
+    },
+    {
+      "name": "cota",
+      "type": "table",
+      "path": "data/cota.csv.gz",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "gz",
+      "encoding": "utf-8",
+      "hash": "sha256:04b3e86841aaa944f708d0bac93403b79ee80b19cf2d0057def5aaf7f7523244",
+      "bytes": 418498,
+      "fields": 19,
+      "rows": 28475,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "string",
+            "title": "Ano de Exercício",
+            "description": "Ano de exercício do orçamento fiscal.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "poder_cod",
+            "type": "string",
+            "title": "Poder Unidade Orçamentária - Código",
+            "description": "Código indicativo do Poder no qual a unidade orçamentária está incluída.\n",
+            "constraints": {
+              "pattern": "^[1-6]$"
+            }
+          },
+          {
+            "name": "uo_cod",
+            "type": "string",
+            "title": "Unidade Orçamentária - Código",
+            "description": "Código representativo da unidade orçamentária.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "ue_cod",
+            "type": "string",
+            "title": "Unidade Executora - Código",
+            "description": "Código composto dos 4 dígitos do órgão executor e dos 3 dígitos da unidade executora.\n",
+            "constraints": {
+              "pattern": "^[1-9]\\d{6}$"
+            }
+          },
+          {
+            "name": "acao_cod",
+            "type": "string",
+            "title": "Ação - Código",
+            "description": "Código identificador do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental (atividade).\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "grupo_cod",
+            "type": "string",
+            "title": "Grupo Despesa - Código",
+            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "constraints": {
+              "pattern": "^([1-6]|9)$"
+            }
+          },
+          {
+            "name": "modalidade_cod",
+            "type": "string",
+            "title": "Modalidade Aplicação - Código",
+            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^\\d{2}$"
+            }
+          },
+          {
+            "name": "iag_cod",
+            "type": "string",
+            "title": "Identificador Orçamento - Código",
+            "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^[0-6]$"
+            }
+          },
+          {
+            "name": "fonte_cod",
+            "type": "string",
+            "title": "Fonte Recurso - Código",
+            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
+            "name": "ipu_cod",
+            "type": "string",
+            "title": "Procedência - Código",
+            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^\\d{1}$"
+            }
+          },
+          {
+            "name": "elemento_item_cod",
+            "type": "string",
+            "title": "Elemento Item Despesa Origem - Código",
+            "description": "Código identificador do elemento item de gasto da despesa.\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^[1-9]\\d{0,3}$"
+            }
+          },
+          {
+            "name": "data_registro_cota",
+            "type": "datetime",
+            "title": "Data Registro Documento Aprovação Cota",
+            "description": "Data completa de registro do documento de aprovação de cota orçamentária.\n",
+            "format": "%Y/%m/%d %H:%M:%S",
+            "constraints": {
+              "minimum": "2002/01/01 00:00:00"
+            }
+          },
+          {
+            "name": "operador_registro",
+            "type": "string",
+            "title": "Operador - Registro",
+            "description": "Operador de registro da aprovação de cota no SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^[A-Z0-9]{7,8}$"
+            }
+          },
+          {
+            "name": "operador_cancelamento",
+            "type": "string",
+            "title": "Operador - Cancelamento",
+            "description": "Operador de cancelamento da aprovação de cota no SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^[A-Z0-9]{7,8}$"
+            }
+          },
+          {
+            "name": "documento_aprovacao_cota",
+            "type": "string",
+            "title": "Documento Aprovação Cota",
+            "description": "Número do documento de aprovação da cota orçamentária.\n",
+            "constraints": {
+              "pattern": "^[1-9]\\d{0,4}$"
+            }
+          },
+          {
+            "name": "vlr_cota_aprovada",
+            "type": "number",
+            "title": "Valor Cota Aprovada",
+            "description": "Valor, em reais, da cota aprovada.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_cota_cancelada",
+            "type": "number",
+            "title": "Valor Cota Cancelada",
+            "description": "Valor, em reais, da cota aprovada cancelada.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_cota_anulada",
+            "type": "number",
+            "title": "Valor Anulação Cota Aprovada",
+            "description": "Valor anulado da cota aprovada, em reais.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_cota_aprovada_liquida",
+            "type": "number",
+            "title": "Valor Cota Aprovada Líquida",
+            "description": "Valor líquido, em reais, da cota aprovada.\n"
+          }
+        ]
+      }
+    },
+    {
+      "name": "credito",
+      "type": "table",
+      "path": "data/credito.csv.gz",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "gz",
+      "encoding": "utf-8",
+      "hash": "sha256:a73de8c836476dea24e1aef522fcae81a6caa8908c78068e9e149619e336eb5f",
+      "bytes": 51448,
+      "fields": 14,
+      "rows": 3227,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "string",
+            "title": "Ano de Exercício",
+            "description": "Ano de exercício do orçamento fiscal.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "uo_cod",
+            "type": "string",
+            "title": "Unidade Orçamentária - Código",
+            "description": "Código representativo da unidade orçamentária.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "funcao_cod",
+            "type": "string",
+            "title": "Função - Código",
+            "description": "Código identificador do nível máximo de agregação das ações do Governo.\n",
+            "constraints": {
+              "pattern": "^\\d{1,2}$"
+            }
+          },
+          {
+            "name": "subfuncao_cod",
+            "type": "string",
+            "title": "Subfunção - Código",
+            "description": "Código de identificador do detalhamento das áreas de atuação do Governo.\n",
+            "constraints": {
+              "pattern": "^\\d{1,3}$"
+            }
+          },
+          {
+            "name": "programa_cod",
+            "type": "string",
+            "title": "Programa - Código",
+            "description": "Código identificador do objeto concreto, bem ou serviço que se quer atingir.\n",
+            "constraints": {
+              "pattern": "^\\d{1,3}$"
+            }
+          },
+          {
+            "name": "acao_cod",
+            "type": "string",
+            "title": "Ação - Código",
+            "description": "Código identificador do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental (atividade).\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "grupo_cod",
+            "type": "string",
+            "title": "Grupo Despesa - Código",
+            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "constraints": {
+              "pattern": "^([1-6]|9)$"
+            }
+          },
+          {
+            "name": "modalidade_cod",
+            "type": "string",
+            "title": "Modalidade Aplicação - Código",
+            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^\\d{2}$"
+            }
+          },
+          {
+            "name": "iag_cod",
+            "type": "string",
+            "title": "Identificador Orçamento - Código",
+            "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^[0-6]$"
+            }
+          },
+          {
+            "name": "fonte_cod",
+            "type": "string",
+            "title": "Fonte Recurso - Código",
+            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
+            "name": "ipu_cod",
+            "type": "string",
+            "title": "Procedência - Código",
+            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^\\d{1}$"
+            }
+          },
+          {
+            "name": "vlr_credito_inicial",
+            "type": "number",
+            "title": "Valor Crédito Inicial",
+            "description": "Valor, em reais, do crédito orçamentário aprovado pela Lei Orçamentária.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_credito_autorizado",
+            "type": "number",
+            "title": "Valor Crédito Autorizado",
+            "description": "Valor total, em reais, correspondente ao somatório dos créditos disponíveis para a execução da despesa.\n"
+          },
+          {
+            "name": "vlr_cota_descentralizada",
+            "type": "number",
+            "title": "Valor Cota Descentralizada",
+            "description": "Valor, em reais, das cotas descentralizadas às unidades executotas.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "execucao",
+      "type": "table",
+      "path": "data/execucao.csv.gz",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "gz",
+      "encoding": "utf-8",
+      "hash": "sha256:33811c2a98a8341347af479f9bb31c0725b10b263f7a93e41e418bdc45fd0a04",
+      "bytes": 28711344,
+      "fields": 30,
+      "rows": 820261,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "string",
+            "title": "Ano de Exercício",
+            "description": "Ano de exercício do orçamento fiscal.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "mes_cod",
+            "type": "string",
+            "title": "Mês",
+            "description": "Mês de registro do documento SIAFI\n",
+            "constraints": {
+              "pattern": "^([1-9]|1[0-4])$"
+            }
+          },
+          {
+            "name": "uo_cod",
+            "type": "string",
+            "title": "Unidade Orçamentária - Código",
+            "description": "Código representativo da unidade orçamentária.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "ue_cod",
+            "type": "string",
+            "title": "Unidade Executora - Código",
+            "description": "Código composto dos 4 dígitos do órgão executor e dos 3 dígitos da unidade executora.\n",
+            "constraints": {
+              "pattern": "^[1-9]\\d{6}$"
+            }
+          },
+          {
+            "name": "upg_cod",
+            "type": "string",
+            "title": "Unidade Programação Gasto - Código",
+            "description": "Código de unidade de programação de gasto relacionado com o código de controle interno da unidade administrativa,\nde acordo com tabela elaborada pela Unidade Orçamentária.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,3})$"
+            }
+          },
+          {
+            "name": "uo_fin_cod",
+            "type": "string",
+            "title": "Unidade Orçamentária Financiadora Gasto - Código",
+            "description": "Código de unidade orçamentária financiadora das despesas referentes à procedência de recursos.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{3})$"
+            }
+          },
+          {
+            "name": "funcao_cod",
+            "type": "string",
+            "title": "Função - Código",
+            "description": "Código identificador do nível máximo de agregação das ações do Governo.\n",
+            "constraints": {
+              "pattern": "^\\d{1,2}$"
+            }
+          },
+          {
+            "name": "subfuncao_cod",
+            "type": "string",
+            "title": "Subfunção - Código",
+            "description": "Código de identificador do detalhamento das áreas de atuação do Governo.\n",
+            "constraints": {
+              "pattern": "^\\d{1,3}$"
+            }
+          },
+          {
+            "name": "programa_cod",
+            "type": "string",
+            "title": "Programa - Código",
+            "description": "Código identificador do objeto concreto, bem ou serviço que se quer atingir.\n",
+            "constraints": {
+              "pattern": "^\\d{1,3}$"
+            }
+          },
+          {
+            "name": "acao_cod",
+            "type": "string",
+            "title": "Ação - Código",
+            "description": "Código identificador do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental (atividade).\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "grupo_cod",
+            "type": "string",
+            "title": "Grupo Despesa - Código",
+            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "constraints": {
+              "pattern": "^([1-6]|9)$"
+            }
+          },
+          {
+            "name": "modalidade_cod",
+            "type": "string",
+            "title": "Modalidade Aplicação - Código",
+            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^\\d{2}$"
+            }
+          },
+          {
+            "name": "iag_cod",
+            "type": "string",
+            "title": "Identificador Orçamento - Código",
+            "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^[0-6]$"
+            }
+          },
+          {
+            "name": "fonte_cod",
+            "type": "string",
+            "title": "Fonte Recurso - Código",
+            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
+            "name": "ipu_cod",
+            "type": "string",
+            "title": "Procedência - Código",
+            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^\\d{1}$"
+            }
+          },
+          {
+            "name": "elemento_item_cod",
+            "type": "string",
+            "title": "Elemento Item Despesa Origem - Código",
+            "description": "Código identificador do elemento item de gasto da despesa.\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^[1-9]\\d{0,3}$"
+            }
+          },
+          {
+            "name": "elemento_dea_cod",
+            "type": "string",
+            "title": "Elemento Origem DEA",
+            "description": "Identifica o elemento de despesa origem de Despesa de Exercício Anterior.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
+            "name": "item_dea_cod",
+            "type": "string",
+            "title": "Item Origem DEA",
+            "description": "Identifica o item de despesa origem de Despesa de Exercício Anterior.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
+            "name": "num_processo_compra",
+            "type": "string",
+            "title": "Número Processo Compra SIAD",
+            "description": "Número de identificação formatado do processo de compra SIAD.\n",
+            "missingValues": [
+              " /"
+            ],
+            "constraints": {
+              "pattern": "^\\d{7}\\s\\d{6}/\\d{4}$"
+            }
+          },
+          {
+            "name": "licitacao_modalidade",
+            "type": "string",
+            "title": "Licitação - Descrição da Modalidade",
+            "description": "Descrição da forma de licitação efetivada de acordo com o SIAFI-MG.\n",
+            "constraints": {
+              "maxLength": 500
+            }
+          },
+          {
+            "name": "cnpj_cpf_formatado",
+            "type": "string",
+            "title": "CNPJ/CPF Credor - Formatado",
+            "description": "Código formatado do CNPJ ou CPF do credor.\n",
+            "missingValues": [
+              "99999999999999"
+            ],
+            "constraints": {
+              "pattern": "^(\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}/\\d{2}|CPF:[0-9a-f]{32})$"
+            },
+            "anonymize": {
+              "method": "aes_siv",
+              "annotation": "CPF:11",
+              "filter": "len([c for c in cnpj_cpf_formatado if c.isdigit()]) == 11"
+            }
+          },
+          {
+            "name": "num_contrato_saida",
+            "type": "string",
+            "title": "Contrato/Convênio Saída",
+            "description": "Número atribuído pelo SIAFI-MG ao contrato/convênio de saída cadastrado no subsistema Rotina Administrativa.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,6})$"
+            }
+          },
+          {
+            "name": "num_contrato_entrada",
+            "type": "string",
+            "title": "Contrato/Convênio Entrada",
+            "description": "Número atribuído pelo SIAFI-MG ao contrato/convênio de entrada cadastrado no subsistema Rotina Administrativa.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,6})$"
+            }
+          },
+          {
+            "name": "num_obra",
+            "type": "string",
+            "title": "Número Obra",
+            "description": "Número da obra associada ao contrato/convênio de obra.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,6})$"
+            }
+          },
+          {
+            "name": "num_empenho",
+            "type": "string",
+            "title": "Número Empenho",
+            "description": "Número do documento de empenho.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,5})$"
+            }
+          },
+          {
+            "name": "vlr_empenhado",
+            "type": "number",
+            "title": "Valor Despesa Empenhada",
+            "description": "Valor líquido, em reais, da despesa empenhada.\n"
+          },
+          {
+            "name": "vlr_liquidado",
+            "type": "number",
+            "title": "Valor Despesa Liquidada",
+            "description": "Valor total da despesa liquidada, em reais.\n"
+          },
+          {
+            "name": "vlr_liquidado_retido",
+            "type": "number",
+            "title": "Valor Liquidado Retido",
+            "description": "Valor, em reais, referente às retenções - parte da liquidação a favor de terceiros,\nindicado apenas para análise de um documento de liquidação específico.\n"
+          },
+          {
+            "name": "vlr_pago_orcamentario",
+            "type": "number",
+            "title": "Valor Pago Orçamentário",
+            "description": "Valor pago, por empenho.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_pago_financeiro",
+            "type": "number",
+            "title": "Valor Pago Financeiro",
+            "description": "Valor referente aos pagamentos efetuados através de movimentações bancárias, escriturais e apropriação contábil da despesa.\nEsse cálculo não inclui valor de anulação de despesa paga.\n"
+          }
+        ]
+      }
+    },
+    {
+      "name": "execucao_alem_credito",
+      "type": "table",
+      "path": "data/execucao_alem_credito.csv.gz",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "gz",
+      "encoding": "utf-8",
+      "hash": "sha256:34391d26a1290dc288ded95faec52909b1ceeff1c0c3d08338baaaeb87512449",
+      "bytes": 2084,
+      "fields": 16,
+      "rows": 172,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "string",
+            "title": "Ano de Exercício",
+            "description": "Ano de exercício do orçamento fiscal.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "mes_cod",
+            "type": "string",
+            "title": "Mês",
+            "description": "Mês de registro do documento SIAFI\n",
+            "constraints": {
+              "pattern": "^([1-9]|1[0-4])$"
+            }
+          },
+          {
+            "name": "mes_regularizacao",
+            "type": "string",
+            "title": "Mês Regularização",
+            "description": "Mês numérico de cancelamento de regularização.\n",
+            "constraints": {
+              "pattern": "^([1-9]|1[0-2])$"
+            }
+          },
+          {
+            "name": "mes_registro",
+            "type": "string",
+            "title": "Mês Registro Documento Despesa Pendente",
+            "description": "Mês numérico de registro do documento de despesa de pessoal pendente de crédito.\n",
+            "constraints": {
+              "pattern": "^([1-9]|1[0-2])$"
+            }
+          },
+          {
+            "name": "uo_cod",
+            "type": "string",
+            "title": "Unidade Orçamentária - Código",
+            "description": "Código representativo da unidade orçamentária.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "funcao_cod",
+            "type": "string",
+            "title": "Função - Código",
+            "description": "Código identificador do nível máximo de agregação das ações do Governo.\n",
+            "constraints": {
+              "pattern": "^\\d{1,2}$"
+            }
+          },
+          {
+            "name": "acao_cod",
+            "type": "string",
+            "title": "Ação - Código",
+            "description": "Código identificador do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental (atividade).\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "grupo_cod",
+            "type": "string",
+            "title": "Grupo Despesa - Código",
+            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "constraints": {
+              "pattern": "^([1-6]|9)$"
+            }
+          },
+          {
+            "name": "modalidade_cod",
+            "type": "string",
+            "title": "Modalidade Aplicação - Código",
+            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^\\d{2}$"
+            }
+          },
+          {
+            "name": "iag_cod",
+            "type": "string",
+            "title": "Identificador Orçamento - Código",
+            "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^[0-6]$"
+            }
+          },
+          {
+            "name": "fonte_cod",
+            "type": "string",
+            "title": "Fonte Recurso - Código",
+            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
+            "name": "ipu_cod",
+            "type": "string",
+            "title": "Procedência - Código",
+            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^\\d{1}$"
+            }
+          },
+          {
+            "name": "elemento_item_cod",
+            "type": "string",
+            "title": "Elemento Item Despesa Origem - Código",
+            "description": "Código identificador do elemento item de gasto da despesa.\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^[1-9]\\d{0,3}$"
+            }
+          },
+          {
+            "name": "vlr_alem_credito",
+            "type": "number",
+            "title": "Valor Além Crédito",
+            "description": "Valor, em reais, da despesa de pessoal pendente de regularização por falta de crédito orçamentário.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_regularizado",
+            "type": "number",
+            "title": "Valor Regularizado",
+            "description": "Valor, em reais, da parte regularizada da despesa de pessoal pendente de regularização por falta de crédito orçamentário.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_anulado",
+            "type": "number",
+            "title": "Valor Anulado",
+            "description": "Valor, em reais, da parte anulada da despesa de pessoal pendente de regularização por falta de crédito orçamentário.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "receita",
+      "type": "table",
+      "path": "data/receita.csv.gz",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "gz",
+      "encoding": "utf-8",
+      "hash": "sha256:5584eca701317974a3c07d8371c1ef81774c37a5de24c1193c9a1ee591ffb00c",
+      "bytes": 111122,
+      "fields": 11,
+      "rows": 7168,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "string",
+            "title": "Ano de Exercício",
+            "description": "Ano de exercício do orçamento fiscal.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "mes_cod",
+            "type": "string",
+            "title": "Mês",
+            "description": "Mês de registro do documento SIAFI\n",
+            "constraints": {
+              "pattern": "^([1-9]|1[0-4])$"
+            }
+          },
+          {
+            "name": "uo_cod",
+            "type": "string",
+            "title": "Unidade Orçamentária - Código",
+            "description": "Código representativo da unidade orçamentária.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "fonte_cod",
+            "type": "string",
+            "title": "Fonte Recurso - Código",
+            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
+            "name": "receita_cod",
+            "type": "string",
+            "title": "Classificação Receita - Código",
+            "description": "Código da classificação da receita.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^(0|[1-9]\\d{9,12})$"
+            }
+          },
+          {
+            "name": "receita_cod_formatado",
+            "type": "string",
+            "title": "Classificação Receita - Formatado",
+            "description": "Código da Classificação Receita Formatado.\n",
+            "constraints": {
+              "pattern": "^\\d{4}\\.\\d{2}\\.\\d{1}\\.\\d{1}\\.\\d{2}\\.\\d{3}$"
+            }
+          },
+          {
+            "name": "vlr_previsto_inicial",
+            "type": "number",
+            "title": "Valor Previsto Inicial",
+            "description": "Valor, em reais, da previsão inicial da receita.\n"
+          },
+          {
+            "name": "vlr_previsto_adicional",
+            "type": "number",
+            "title": "Valor Previsto Adicional",
+            "description": "Valor, em reais, da previsão adicional da receita.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_previsto_atualizado",
+            "type": "number",
+            "title": "Valor Previsto Atualizado",
+            "description": "Valor, em reais, da previsão atualizada da receita.\n"
+          },
+          {
+            "name": "vlr_contabilizado",
+            "type": "number",
+            "title": "Valor Contabilizado",
+            "description": "Valor, em reais, da receita orçamentária contabilizada.\nAparece negativo quando houve cancelamento da receita.\n"
+          },
+          {
+            "name": "vlr_efetivado_ajustado",
+            "type": "number",
+            "title": "Valor Efetivado Ajustado",
+            "description": "Valor, em reais, da receita orçamentária efetivada ajustada.\n"
+          }
+        ]
+      }
+    },
+    {
+      "name": "restos_pagar",
+      "type": "table",
+      "path": "data/restos_pagar.csv.gz",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "gz",
+      "encoding": "utf-8",
+      "hash": "sha256:8c701a46b6c15986225c6b15091e9996f0d673bf2ba9a499b64e27c35b0e68d9",
+      "bytes": 8405889,
+      "fields": 45,
+      "rows": 212300,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "string",
+            "title": "Ano de Exercício",
+            "description": "Ano de exercício do orçamento fiscal.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "ano_rp",
+            "type": "string",
+            "title": "Ano Origem Restos a Pagar",
+            "description": "Ano de origem do documento de Restos a Pagar.\n",
+            "constraints": {
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "mes_cod",
+            "type": "string",
+            "title": "Mês",
+            "description": "Mês de registro do documento SIAFI\n",
+            "constraints": {
+              "pattern": "^([1-9]|1[0-4])$"
+            }
+          },
+          {
+            "name": "uo_cod",
+            "type": "string",
+            "title": "Unidade Orçamentária - Código",
+            "description": "Código representativo da unidade orçamentária.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "ue_cod",
+            "type": "string",
+            "title": "Unidade Executora - Código",
+            "description": "Código composto dos 4 dígitos do órgão executor e dos 3 dígitos da unidade executora.\n",
+            "constraints": {
+              "pattern": "^[1-9]\\d{6}$"
+            }
+          },
+          {
+            "name": "uo_fin_cod",
+            "type": "string",
+            "title": "Unidade Orçamentária Financiadora Gasto - Código",
+            "description": "Código de unidade orçamentária financiadora das despesas referentes à procedência de recursos.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{3})$"
+            }
+          },
+          {
+            "name": "upg_cod",
+            "type": "string",
+            "title": "Unidade Programação Gasto - Código",
+            "description": "Código de unidade de programação de gasto relacionado com o código de controle interno da unidade administrativa,\nde acordo com tabela elaborada pela Unidade Orçamentária.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,3})$"
+            }
+          },
+          {
+            "name": "funcao_cod",
+            "type": "string",
+            "title": "Função - Código",
+            "description": "Código identificador do nível máximo de agregação das ações do Governo.\n",
+            "constraints": {
+              "pattern": "^\\d{1,2}$"
+            }
+          },
+          {
+            "name": "acao_cod",
+            "type": "string",
+            "title": "Ação - Código",
+            "description": "Código identificador do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental (atividade).\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "grupo_cod",
+            "type": "string",
+            "title": "Grupo Despesa - Código",
+            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "constraints": {
+              "pattern": "^([1-6]|9)$"
+            }
+          },
+          {
+            "name": "modalidade_cod",
+            "type": "string",
+            "title": "Modalidade Aplicação - Código",
+            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^\\d{2}$"
+            }
+          },
+          {
+            "name": "iag_cod",
+            "type": "string",
+            "title": "Identificador Orçamento - Código",
+            "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^[0-6]$"
+            }
+          },
+          {
+            "name": "fonte_cod",
+            "type": "string",
+            "title": "Fonte Recurso - Código",
+            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
+            "name": "ipu_cod",
+            "type": "string",
+            "title": "Procedência - Código",
+            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^\\d{1}$"
+            }
+          },
+          {
+            "name": "elemento_cod",
+            "type": "string",
+            "title": "Elemento Despesa - Código",
+            "description": "Código identificador do elemento de gasto da despesa.\n",
+            "constraints": {
+              "pattern": "^\\d{1,2}$"
+            }
+          },
+          {
+            "name": "item_cod",
+            "type": "string",
+            "title": "Item Despesa - Código",
+            "description": "Código identificador do item de despesa.\n",
+            "constraints": {
+              "pattern": "^\\d{1,2}$"
+            }
+          },
+          {
+            "name": "elemento_dea_cod",
+            "type": "string",
+            "title": "Elemento Origem DEA",
+            "description": "Identifica o elemento de despesa origem de Despesa de Exercício Anterior.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
+            "name": "item_dea_cod",
+            "type": "string",
+            "title": "Item Origem DEA",
+            "description": "Identifica o item de despesa origem de Despesa de Exercício Anterior.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
+            "name": "elemento_item_cod",
+            "type": "string",
+            "title": "Elemento Item Despesa Origem - Código",
+            "description": "Código identificador do elemento item de gasto da despesa.\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^[1-9]\\d{0,3}$"
+            }
+          },
+          {
+            "name": "num_empenho",
+            "type": "string",
+            "title": "Número Empenho",
+            "description": "Número do documento de empenho.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,5})$"
+            }
+          },
+          {
+            "name": "cnpj_cpf_formatado",
+            "type": "string",
+            "title": "CNPJ/CPF Credor - Formatado",
+            "description": "Código formatado do CNPJ ou CPF do credor.\n",
+            "missingValues": [
+              "99999999999999"
+            ],
+            "constraints": {
+              "pattern": "^(\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}/\\d{2}|CPF:[0-9a-f]{32})$"
+            },
+            "anonymize": {
+              "method": "aes_siv",
+              "annotation": "CPF:11",
+              "filter": "len([c for c in cnpj_cpf_formatado if c.isdigit()]) == 11"
+            }
+          },
+          {
+            "name": "razao_social_credor",
+            "type": "string",
+            "title": "Razão Social Credor",
+            "description": "Razão social do credor.\n",
+            "constraints": {
+              "maxLength": 500
+            },
+            "anonymize": {
+              "method": "[INFORMACAO COM RESTRICAO DE ACESSO]",
+              "filter": "(int(ano) > 2021 and int(uo_cod) == 4291 and int(upg_cod) == 761) or (int(uo_cod) == 2041 and int(elemento_cod) == 31 and int(item_cod) == 2)\n"
+            }
+          },
+          {
+            "name": "num_contrato_entrada",
+            "type": "string",
+            "title": "Contrato/Convênio Entrada",
+            "description": "Número atribuído pelo SIAFI-MG ao contrato/convênio de entrada cadastrado no subsistema Rotina Administrativa.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,6})$"
+            }
+          },
+          {
+            "name": "num_contrato_saida",
+            "type": "string",
+            "title": "Contrato/Convênio Saída",
+            "description": "Número atribuído pelo SIAFI-MG ao contrato/convênio de saída cadastrado no subsistema Rotina Administrativa.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,6})$"
+            }
+          },
+          {
+            "name": "num_obra",
+            "type": "string",
+            "title": "Número Obra",
+            "description": "Número da obra associada ao contrato/convênio de obra.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,6})$"
+            }
+          },
+          {
+            "name": "num_processo_compra",
+            "type": "string",
+            "title": "Número Processo Compra SIAD",
+            "description": "Número de identificação formatado do processo de compra SIAD.\n",
+            "missingValues": [
+              " /"
+            ],
+            "constraints": {
+              "pattern": "^\\d{7}\\s\\d{6}/\\d{4}$"
+            }
+          },
+          {
+            "name": "vlr_inscrito_rpnp",
+            "type": "number",
+            "title": "Valor Inscrito Não Processado",
+            "description": "Valor, em reais, de saldo de empenhos.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_cancelado_rpnp",
+            "type": "number",
+            "title": "Valor Cancelado Não Processado",
+            "description": "Valor cancelado, em reais, de empenho inscrito em Restos a Pagar não processado.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_restabelecido_rpnp",
+            "type": "number",
+            "title": "Valor Restabelecido Não Processado",
+            "description": "Valor restabelecido, em reais, de empenho inscrito em Restos a Pagar não processado, cancelado anteriormente.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_despesa_liquidada_rpnp",
+            "type": "number",
+            "title": "Valor Despesa Liquidada",
+            "description": "Valor total, em reais, da despesa liquidada de resto a pagar não processado, registrada no exercício.\n"
+          },
+          {
+            "name": "vlr_despesa_liquidada_pagar",
+            "type": "number",
+            "title": "Valor Despesa Liquidada a Pagar",
+            "description": "Valor total, em reais, do saldo a pagar.\n"
+          },
+          {
+            "name": "vlr_saldo_rpp",
+            "type": "number",
+            "title": "Saldo Restos a Pagar Processado",
+            "description": "Valor, em reais, de saldo a pagar de despesa liquidada inscrita em Restos a Pagar processado.\n"
+          },
+          {
+            "name": "vlr_saldo_rpnp",
+            "type": "number",
+            "title": "Saldo Restos a Pagar Não Processado",
+            "description": "Valor, em reais, de saldo a liquidar de empenhos inscritos em Restos a Pagar não processado.\n"
+          },
+          {
+            "name": "vlr_inscrito_rpp",
+            "type": "number",
+            "title": "Valor Inscrito Processado",
+            "description": "Valor, em reais, de despesa liquidada de exercícios anteriores.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_cancelado_rpp",
+            "type": "number",
+            "title": "Valor Cancelado Processado",
+            "description": "Valor cancelado, em reais, de despesa liquidada inscrita em Restos a Pagar.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_desconto_rpp",
+            "type": "number",
+            "title": "Valor Desconto Processado",
+            "description": "Valor, em reais, de abatimento sobre o valor de pagamento de inscrição em Restos a Pagar processado.\nAtenção: não considera os descontos efetuados em pagamentos de retenção/consignação.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_restabelecido_rpp",
+            "type": "number",
+            "title": "Valor Restabelecido Processado",
+            "description": "Valor restabelecido, em reais, de despesa liquidada inscrita, cancelada anteriormente.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_pago_rpp",
+            "type": "number",
+            "title": "Valor Pago Processado",
+            "description": "Valor pago, em reais, referente a valor inscrito processado, total ou parcial.\nAtenção: não considera os valores pagos de retenção/consignação.\n"
+          },
+          {
+            "name": "vlr_anulacao_pagamento_rpp",
+            "type": "number",
+            "title": "Valor Anulação Pagamento Processado",
+            "description": "Valor, em reais, da anulação da despesa através da devolução, do Pagamento de restos a pagar processado.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_retencao_rpp",
+            "type": "number",
+            "title": "Valor Retenção Processado",
+            "description": "Valor restabelecido, em reais, de despesa liquidada inscrita, cancelada anteriormente.\n"
+          },
+          {
+            "name": "vlr_anulacao_retencao_rpp",
+            "type": "number",
+            "title": "Valor Anulação Retenção Processado",
+            "description": "Valor, em reais, de anulação do valor de retenção processado.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_anulacao_pago_antecipado",
+            "type": "number",
+            "title": "Valor Anulação Pago Antecipado",
+            "description": "Valor total, em reais, de anulação de pago antecipado de restos a pagar.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_pago_antecipado_exercicio",
+            "type": "number",
+            "title": "Valor Pago Antecipado Exercício",
+            "description": "Valor Contratual Pago antecipado.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_pago_rpnp",
+            "type": "number",
+            "title": "Valor Pago Não Processado",
+            "description": "Valor pago, em reais, referente a valor inscrito não processado, total ou parcial.\nAtenção: não considera os valores pagos de retenção/consignação.\n"
+          },
+          {
+            "name": "vlr_retencao_rpnp",
+            "type": "number",
+            "title": "Valor Retenção Não Processado",
+            "description": "Valor, em reais, de Restos a Pagar não processado de Ordem de Pagamento.\n"
+          }
+        ]
+      }
+    },
+    {
+      "name": "restos_pagar_folha",
+      "type": "table",
+      "path": "data/restos_pagar_folha.csv.gz",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "gz",
+      "encoding": "utf-8",
+      "hash": "sha256:c5c526949de791311d0c83a76b77b79f443f2b6ea6b9f7dad56088597c54b318",
+      "bytes": 8306,
+      "fields": 13,
+      "rows": 784,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "string",
+            "title": "Ano de Exercício",
+            "description": "Ano de exercício do orçamento fiscal.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "mes_cod",
+            "type": "string",
+            "title": "Mês",
+            "description": "Mês de registro do documento SIAFI\n",
+            "constraints": {
+              "pattern": "^([1-9]|1[0-4])$"
+            }
+          },
+          {
+            "name": "ano_rp_folha",
+            "type": "string",
+            "title": "Ano Origem Folha Pagamento",
+            "description": "Ano de origem do documento de folha de pagamento inscrita em Restos a Pagar.\n",
+            "constraints": {
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "uo_cod",
+            "type": "string",
+            "title": "Unidade Orçamentária - Código",
+            "description": "Código representativo da unidade orçamentária.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^[1-9]\\d{3}$"
+            }
+          },
+          {
+            "name": "grupo_cod",
+            "type": "string",
+            "title": "Grupo Despesa - Código",
+            "description": "Código do grupo de natureza econômica da despesa.\n",
+            "constraints": {
+              "pattern": "^([1-6]|9)$"
+            }
+          },
+          {
+            "name": "modalidade_cod",
+            "type": "string",
+            "title": "Modalidade Aplicação - Código",
+            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
+            "missingValues": [
+              "0",
+              ""
+            ],
+            "constraints": {
+              "pattern": "^\\d{2}$"
+            }
+          },
+          {
+            "name": "iag_cod",
+            "type": "string",
+            "title": "Identificador Orçamento - Código",
+            "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^[0-6]$"
+            }
+          },
+          {
+            "name": "fonte_cod",
+            "type": "string",
+            "title": "Fonte Recurso - Código",
+            "description": "Código referente à fonte dos recursos financeiros, de acordo com o SIAFI-MG.\n",
+            "constraints": {
+              "required": true,
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
+            "name": "ipu_cod",
+            "type": "string",
+            "title": "Procedência - Código",
+            "description": "Código identificador da procedência dos recursos financeiros conforme o SIAFI-MG.\n",
+            "constraints": {
+              "pattern": "^\\d{1}$"
+            }
+          },
+          {
+            "name": "vlr_inscrito_folha",
+            "type": "number",
+            "title": "Valor Inscrito Folha",
+            "description": "Valor, em reais, da folha de pagamento de exercícios anteriores inscrita em Restos a Pagar.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_anulado_folha",
+            "type": "number",
+            "title": "Valor Anulado Folha",
+            "description": "Valor anulado, em reais, do saldo da folha de pagamento de exercícios anteriores inscrita em Restos a Pagar - FP.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_pago_folha",
+            "type": "number",
+            "title": "Valor Pago Folha",
+            "description": "Valor pago, em reais, referente a valor inscrito processado de folha de pagamento, total ou parcial.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_despesa_liquidada_pagar_folha",
+            "type": "number",
+            "title": "Valor Despesa Liquidada a Pagar - Folha",
+            "description": "Valor, em reais, do saldo a pagar processado de folha de pagamento.\n"
+          }
+        ]
+      }
+    }
+  ],
+  "owner_org": "secretaria-de-estado-de-planejamento-e-gestao-seplag",
+  "updated_at": "2026-09-18T08:28:37"
+}

@@ -11,10 +11,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:95d576e7d83771acde23413cf667e9522cfe02087b2c41869d05623e684083bc",
-      "bytes": 106566,
+      "hash": "sha256:a5365b6febfd001989bb8a91eeecf9c4ea8f75ff8ab7a8dbb0ad227d3588e28c",
+      "bytes": 106882,
       "fields": 22,
-      "rows": 6627,
+      "rows": 6645,
       "dialect": {
         "csv": {
           "delimiter": ","
@@ -242,10 +242,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:9d0f044246b9e01d8db0bfe036078d24708f366264e876d2ea51d1c5f702a941",
-      "bytes": 436459,
+      "hash": "sha256:b915703f5851e781f8d8947daa4cff8033d17667ec7c92398181b23b937fb059",
+      "bytes": 439681,
       "fields": 19,
-      "rows": 29740,
+      "rows": 29960,
       "dialect": {
         "csv": {
           "delimiter": ","
@@ -449,10 +449,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:7e5798018150be4ed84db37cc5a2e64fc4056948219b6323d90fbe5536d67ece",
-      "bytes": 51645,
+      "hash": "sha256:11d98170cac7603005859806b2a6551624ee8e54636b63796d5fd80cec9a7bf9",
+      "bytes": 51598,
       "fields": 14,
-      "rows": 3241,
+      "rows": 3243,
       "dialect": {
         "csv": {
           "delimiter": ","
@@ -606,10 +606,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:ca09928e8392a10ee4b7f6b6324f8ef5d670115a1641d0eeb8144992f4910d1c",
-      "bytes": 29633590,
+      "hash": "sha256:00734a88596fdbb7954e952ed9d94d1475c30b9bdd270f3f0a5ebf678217a361",
+      "bytes": 29770007,
       "fields": 30,
-      "rows": 845483,
+      "rows": 848485,
       "dialect": {
         "csv": {
           "delimiter": ","
@@ -913,10 +913,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:06d0f1cea4a296a35f45a945988701c4b404a04d370397645e0e633132e21a78",
-      "bytes": 2230,
+      "hash": "sha256:f9f30a38575b2ce724d74569c6545f57e2c6659c05879ed0b651e63dfafcd7f5",
+      "bytes": 2264,
       "fields": 16,
-      "rows": 184,
+      "rows": 187,
       "dialect": {
         "csv": {
           "delimiter": ","
@@ -1095,10 +1095,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:9ba6e023020f7d2e13176c11a060cff39e22c131062210668e370d4178876bd3",
-      "bytes": 112018,
+      "hash": "sha256:5b3274264f8f13bf86c3042c64d1d762cd51741bdc5c6fda138d71f201f61331",
+      "bytes": 112442,
       "fields": 11,
-      "rows": 7228,
+      "rows": 7250,
       "dialect": {
         "csv": {
           "delimiter": ","
@@ -1209,10 +1209,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:3d7578466fb94d42c2434d99621556fa5867278fd17425e3ba4bb802fcea8f9d",
-      "bytes": 8506380,
+      "hash": "sha256:40960a6a1e813e3220639ab1e5198d6edb9a9cfb41acf4631efa9c6103b05071",
+      "bytes": 8521442,
       "fields": 45,
-      "rows": 215039,
+      "rows": 215091,
       "dialect": {
         "csv": {
           "delimiter": ","
@@ -1643,10 +1643,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:9d515f6e2f0985ee53ff7380a092d4cf15eee841141c470951fee9f1bb3cf99b",
-      "bytes": 8376,
+      "hash": "sha256:966920ccb914a11e7c9cc7c484487b6bd3d73805a87b10065ada5140f94e78a2",
+      "bytes": 8431,
       "fields": 13,
-      "rows": 790,
+      "rows": 794,
       "dialect": {
         "csv": {
           "delimiter": ","
@@ -1780,5 +1780,5 @@
     }
   ],
   "owner_org": "secretaria-de-estado-de-planejamento-e-gestao-seplag",
-  "updated_at": "2026-09-29T16:41:45"
+  "updated_at": "2026-09-30T16:36:13"
 }

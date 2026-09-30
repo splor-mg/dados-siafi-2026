@@ -11,7 +11,7 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:a5365b6febfd001989bb8a91eeecf9c4ea8f75ff8ab7a8dbb0ad227d3588e28c",
+      "hash": "sha256:821952000f7e863953b53a95e7179b592f90d0f2c14bd0b8d6c01fafc6f1479f",
       "bytes": 106882,
       "fields": 22,
       "rows": 6645,
@@ -242,7 +242,7 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:b915703f5851e781f8d8947daa4cff8033d17667ec7c92398181b23b937fb059",
+      "hash": "sha256:7db1405d2d5d974a4eb9bfc46dc49ea79766cadbc9a9cee00170fa8efe3c9b3f",
       "bytes": 439681,
       "fields": 19,
       "rows": 29960,
@@ -449,8 +449,8 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:11d98170cac7603005859806b2a6551624ee8e54636b63796d5fd80cec9a7bf9",
-      "bytes": 51598,
+      "hash": "sha256:c6670eec28137d59b67ecc70895ee54e3975c16618846fe21fe310c7541fbf05",
+      "bytes": 51651,
       "fields": 14,
       "rows": 3243,
       "dialect": {
@@ -606,8 +606,8 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:00734a88596fdbb7954e952ed9d94d1475c30b9bdd270f3f0a5ebf678217a361",
-      "bytes": 29770007,
+      "hash": "sha256:c4d08343e99a5d9a01b213a1ce10ff28565198e6624c346c826c6087f3df2963",
+      "bytes": 29769962,
       "fields": 30,
       "rows": 848485,
       "dialect": {
@@ -824,12 +824,7 @@
               "99999999999999"
             ],
             "constraints": {
-              "pattern": "^(\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}/\\d{2}|CPF:[0-9a-f]{32})$"
-            },
-            "anonymize": {
-              "method": "aes_siv",
-              "annotation": "CPF:11",
-              "filter": "len([c for c in cnpj_cpf_formatado if c.isdigit()]) == 11"
+              "pattern": "^((\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}/\\d{2}|CPF:[0-9a-f]{32})|CPF:[0-9a-f]{32})$"
             }
           },
           {
@@ -913,7 +908,7 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:f9f30a38575b2ce724d74569c6545f57e2c6659c05879ed0b651e63dfafcd7f5",
+      "hash": "sha256:5d23a9e02b8c81f7c1e9d236ba1d3fad5a6b885219efc2ebcf16903fe5b2fac0",
       "bytes": 2264,
       "fields": 16,
       "rows": 187,
@@ -1095,7 +1090,7 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:5b3274264f8f13bf86c3042c64d1d762cd51741bdc5c6fda138d71f201f61331",
+      "hash": "sha256:9b15f17ec0a848ea6d9ba9fc7db62a3cbaec93e664d0d358c9d16bfcfccef6e0",
       "bytes": 112442,
       "fields": 11,
       "rows": 7250,
@@ -1209,8 +1204,8 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:40960a6a1e813e3220639ab1e5198d6edb9a9cfb41acf4631efa9c6103b05071",
-      "bytes": 8521442,
+      "hash": "sha256:dcdc86c20727128edb5203a546a82b999412f6b4c7fd51bef819ca19f20db3d1",
+      "bytes": 9884495,
       "fields": 45,
       "rows": 215091,
       "dialect": {
@@ -1424,26 +1419,14 @@
               "99999999999999"
             ],
             "constraints": {
-              "pattern": "^(\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}/\\d{2}|CPF:[0-9a-f]{32})$"
-            },
-            "anonymize": {
-              "method": "aes_siv",
-              "annotation": "CPF:11",
-              "filter": "len([c for c in cnpj_cpf_formatado if c.isdigit()]) == 11"
+              "pattern": "^((\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}/\\d{2}|CPF:[0-9a-f]{32})|CPF:[0-9a-f]{32})$"
             }
           },
           {
             "name": "razao_social_credor",
             "type": "string",
             "title": "Razão Social Credor",
-            "description": "Razão social do credor.\n",
-            "constraints": {
-              "maxLength": 500
-            },
-            "anonymize": {
-              "method": "[INFORMACAO COM RESTRICAO DE ACESSO]",
-              "filter": "(int(ano) > 2021 and int(uo_cod) == 4291 and int(upg_cod) == 761) or (int(uo_cod) == 2041 and int(elemento_cod) == 31 and int(item_cod) == 2)\n"
-            }
+            "description": "Razão social do credor.\n"
           },
           {
             "name": "num_contrato_entrada",
@@ -1643,8 +1626,8 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:966920ccb914a11e7c9cc7c484487b6bd3d73805a87b10065ada5140f94e78a2",
-      "bytes": 8431,
+      "hash": "sha256:d7db763b61d1b0ebb3a80ed19abde751d9da068e1e536e7647b864d22fbead22",
+      "bytes": 8425,
       "fields": 13,
       "rows": 794,
       "dialect": {
@@ -1780,5 +1763,5 @@
     }
   ],
   "owner_org": "secretaria-de-estado-de-planejamento-e-gestao-seplag",
-  "updated_at": "2026-09-30T16:36:13"
+  "updated_at": "2026-09-30T14:07:36"
 }

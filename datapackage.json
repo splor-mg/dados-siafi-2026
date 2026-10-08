@@ -11,10 +11,15 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:70a9fd05546f7d00048c24e83b679e89f2cb7b0c5917dccf6f93d1a1d931746c",
-      "bytes": 113787,
-      "fields": 24,
+      "hash": "sha256:85a7a7bc5549dbc2ccd9ad78d3847f22afb87559eaede600695c2179418742ac",
+      "bytes": 109754,
+      "fields": 22,
       "rows": 6818,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
       "schema": {
         "fields": [
           {
@@ -224,14 +229,6 @@
             "type": "number",
             "title": "Valor Crédito Autorizado",
             "description": "Valor total, em reais, correspondente ao somatório dos créditos disponíveis para a execução da despesa.\n"
-          },
-          {
-            "name": "intra_saude",
-            "type": "boolean"
-          },
-          {
-            "name": "asps",
-            "type": "boolean"
           }
         ]
       }
@@ -245,10 +242,15 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:3dc8fcc706ce7740ba30a616487aa6f9b11215eb5d2bdfe4e9c6d20db0eefb12",
-      "bytes": 473194,
-      "fields": 20,
+      "hash": "sha256:731d62ff2eb5f7ec09f38696d9f27dd50f49c0025a7cd38cbbbaa014a0be86bb",
+      "bytes": 464660,
+      "fields": 19,
       "rows": 31662,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
       "schema": {
         "fields": [
           {
@@ -434,10 +436,6 @@
             "type": "number",
             "title": "Valor Cota Aprovada Líquida",
             "description": "Valor líquido, em reais, da cota aprovada.\n"
-          },
-          {
-            "name": "asps",
-            "type": "boolean"
           }
         ]
       }
@@ -451,10 +449,15 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:3f3a427947d965604a28dd8391f67cc5240df77e92bc957e9a21aa2ff15d313f",
-      "bytes": 54832,
-      "fields": 16,
+      "hash": "sha256:db9f8a2a785f7fe7a4d99d9d9b83a8e27b5301ecf47bf634e33c659b9735a631",
+      "bytes": 51114,
+      "fields": 14,
       "rows": 3254,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
       "schema": {
         "fields": [
           {
@@ -590,14 +593,6 @@
             "constraints": {
               "minimum": 0
             }
-          },
-          {
-            "name": "intra_saude",
-            "type": "boolean"
-          },
-          {
-            "name": "asps",
-            "type": "boolean"
           }
         ]
       }
@@ -611,10 +606,15 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:c5f3ded48bd96e805e0c1133f1f48cc9a34496e13348b2a38c98fc18ae59503f",
-      "bytes": 31847027,
-      "fields": 31,
+      "hash": "sha256:1834a2bf018021e1d4f147682127ebd6f2beb03b11a34070b71aea840155733e",
+      "bytes": 30966132,
+      "fields": 30,
       "rows": 882571,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
       "schema": {
         "fields": [
           {
@@ -900,10 +900,6 @@
             "type": "number",
             "title": "Valor Pago Financeiro",
             "description": "Valor referente aos pagamentos efetuados através de movimentações bancárias, escriturais e apropriação contábil da despesa.\nEsse cálculo não inclui valor de anulação de despesa paga.\n"
-          },
-          {
-            "name": "asps",
-            "type": "boolean"
           }
         ]
       }
@@ -917,10 +913,15 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:ac179bbd21fc81d1658a303d7b3e8577f304d93bc8f7dae6a96aa9de59eb901f",
-      "bytes": 2387,
-      "fields": 17,
+      "hash": "sha256:15162276657f3dcbd6fdc22f6b64481b5819e12e691f1b003a4576b747d70868",
+      "bytes": 2323,
+      "fields": 16,
       "rows": 193,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
       "schema": {
         "fields": [
           {
@@ -1081,10 +1082,6 @@
             "constraints": {
               "minimum": 0
             }
-          },
-          {
-            "name": "asps",
-            "type": "boolean"
           }
         ]
       }
@@ -1098,10 +1095,15 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:b85ccde2c60f0419bf9d97b7ab3643b54250cbfc8953e06e1d0e08620eac857c",
-      "bytes": 143401,
-      "fields": 28,
+      "hash": "sha256:aa19b0478771586b3deaa3fadb5ba2688d91a44e5032ba436457188d2cb6cb26",
+      "bytes": 121555,
+      "fields": 11,
       "rows": 7783,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
       "schema": {
         "fields": [
           {
@@ -1194,74 +1196,6 @@
             "type": "number",
             "title": "Valor Efetivado Ajustado",
             "description": "Valor, em reais, da receita orçamentária efetivada ajustada.\n"
-          },
-          {
-            "name": "asps",
-            "type": "boolean"
-          },
-          {
-            "name": "ibs",
-            "type": "boolean"
-          },
-          {
-            "name": "ibs_acessorias",
-            "type": "boolean"
-          },
-          {
-            "name": "ibs_principal",
-            "type": "boolean"
-          },
-          {
-            "name": "icms",
-            "type": "boolean"
-          },
-          {
-            "name": "icms_acessorias",
-            "type": "boolean"
-          },
-          {
-            "name": "icms_principal",
-            "type": "boolean"
-          },
-          {
-            "name": "ipva",
-            "type": "boolean"
-          },
-          {
-            "name": "ipva_acessorias",
-            "type": "boolean"
-          },
-          {
-            "name": "ipva_principal",
-            "type": "boolean"
-          },
-          {
-            "name": "irrf",
-            "type": "boolean"
-          },
-          {
-            "name": "irrf_acessorias",
-            "type": "boolean"
-          },
-          {
-            "name": "irrf_principal",
-            "type": "boolean"
-          },
-          {
-            "name": "itcd",
-            "type": "boolean"
-          },
-          {
-            "name": "itcd_acessorias",
-            "type": "boolean"
-          },
-          {
-            "name": "itcd_principal",
-            "type": "boolean"
-          },
-          {
-            "name": "impostos",
-            "type": "boolean"
           }
         ]
       }
@@ -1275,10 +1209,15 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:5374100789941b79a987ab8aaff869fdbe3fddd065e04020db434a2aa8578cab",
-      "bytes": 10138257,
-      "fields": 46,
+      "hash": "sha256:6fc977efaa3a8c27648d35130ec2dedb31bed4c66893cbc3fba3617965591291",
+      "bytes": 8512553,
+      "fields": 45,
       "rows": 216230,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
       "schema": {
         "fields": [
           {
@@ -1691,10 +1630,6 @@
             "type": "number",
             "title": "Valor Retenção Não Processado",
             "description": "Valor, em reais, de Restos a Pagar não processado de Ordem de Pagamento.\n"
-          },
-          {
-            "name": "asps",
-            "type": "boolean"
           }
         ]
       }
@@ -1708,10 +1643,15 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:3e45fe8e829160bc19cc001644c0be63d385587c6fca5c55818458c0bb51965f",
-      "bytes": 8806,
-      "fields": 15,
+      "hash": "sha256:caf5b546bb56bc28eebbd83ae2052770af3702957d7cc64967180d6f7f9c65ef",
+      "bytes": 8433,
+      "fields": 13,
       "rows": 795,
+      "dialect": {
+        "csv": {
+          "delimiter": ","
+        }
+      },
       "schema": {
         "fields": [
           {
@@ -1834,48 +1774,11 @@
             "type": "number",
             "title": "Valor Despesa Liquidada a Pagar - Folha",
             "description": "Valor, em reais, do saldo a pagar processado de folha de pagamento.\n"
-          },
-          {
-            "name": "intra_saude",
-            "type": "boolean"
-          },
-          {
-            "name": "asps",
-            "type": "boolean"
           }
         ]
       }
     }
   ],
   "owner_org": "secretaria-de-estado-de-planejamento-e-gestao-seplag",
-  "custom": [
-    {
-      "sources": [
-        {
-          "id": "relatorios",
-          "source": "https://github.com/splor-mg/regras-orcamentarias-mg/tree/main/rules"
-        }
-      ]
-    },
-    {
-      "flows": [
-        {
-          "id": "receita",
-          "description": "regras para aplicação nos recursos: receita",
-          "rules": [
-            "is_asps_rec",
-            "is_impostos"
-          ]
-        },
-        {
-          "id": "despesa",
-          "description": "regras para aplicação nos recursos: execucao, cota, credito",
-          "rules": [
-            "is_asps_desp"
-          ]
-        }
-      ]
-    }
-  ],
-  "updated_at": "2026-10-08T14:08:39"
+  "updated_at": "2026-10-08T17:34:51"
 }

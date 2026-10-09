@@ -11,15 +11,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:85a7a7bc5549dbc2ccd9ad78d3847f22afb87559eaede600695c2179418742ac",
-      "bytes": 109754,
-      "fields": 22,
-      "rows": 6818,
-      "dialect": {
-        "csv": {
-          "delimiter": ","
-        }
-      },
+      "hash": "sha256:9cfa1bbdd8cdc2618fb441334b0d4ae5e419d83e16a9d4d1a04309b8d9cb166b",
+      "bytes": 114165,
+      "fields": 24,
+      "rows": 6850,
       "schema": {
         "fields": [
           {
@@ -29,7 +24,7 @@
             "description": "Ano de exercício do orçamento fiscal.\n",
             "constraints": {
               "required": true,
-              "pattern": "^[1-9]\\d{3}$"
+              "pattern": "^[1-2]\\d{3}$"
             }
           },
           {
@@ -229,6 +224,24 @@
             "type": "number",
             "title": "Valor Crédito Autorizado",
             "description": "Valor total, em reais, correspondente ao somatório dos créditos disponíveis para a execução da despesa.\n"
+          },
+          {
+            "name": "intra_saude",
+            "type": "boolean",
+            "title": "Intraorçamentária de saúde",
+            "description": "Indica se a despesa corresponde a uma operação intraorçamentária de Ações e Serviços Públicos de Saúde (ASPS).\nA LC 141/2012, que regulamenta o art. 198, § 2º da CF/88, determina que as despesas com ASPS sejam financiadas com recursos movimentados por meio dos fundos de saúde.\nDesde 2014, o Estado de Minas Gerais operacionaliza esse processo por meio de operações intraorçamentárias, com transação via Fundo Estadual de Saúde de toda a despesa executada pelas entidades da Administração Indireta.\nAssume `True` quando a despesa se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "asps",
+            "type": "boolean",
+            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
+            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
           }
         ]
       }
@@ -242,15 +255,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:731d62ff2eb5f7ec09f38696d9f27dd50f49c0025a7cd38cbbbaa014a0be86bb",
-      "bytes": 464660,
-      "fields": 19,
-      "rows": 31662,
-      "dialect": {
-        "csv": {
-          "delimiter": ","
-        }
-      },
+      "hash": "sha256:e9c2a7d4d823d118757b8ada2f1f52430b66bb8a1364887639228ab6c3d7e6a2",
+      "bytes": 475956,
+      "fields": 20,
+      "rows": 31838,
       "schema": {
         "fields": [
           {
@@ -260,7 +268,7 @@
             "description": "Ano de exercício do orçamento fiscal.\n",
             "constraints": {
               "required": true,
-              "pattern": "^[1-9]\\d{3}$"
+              "pattern": "^[1-2]\\d{3}$"
             }
           },
           {
@@ -436,6 +444,15 @@
             "type": "number",
             "title": "Valor Cota Aprovada Líquida",
             "description": "Valor líquido, em reais, da cota aprovada.\n"
+          },
+          {
+            "name": "asps",
+            "type": "boolean",
+            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
+            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
           }
         ]
       }
@@ -449,15 +466,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:db9f8a2a785f7fe7a4d99d9d9b83a8e27b5301ecf47bf634e33c659b9735a631",
-      "bytes": 51114,
-      "fields": 14,
-      "rows": 3254,
-      "dialect": {
-        "csv": {
-          "delimiter": ","
-        }
-      },
+      "hash": "sha256:74f5bb01d0166d220841892d7e6453db58cdef22f24ac13df8c678535d77eb12",
+      "bytes": 54847,
+      "fields": 16,
+      "rows": 3261,
       "schema": {
         "fields": [
           {
@@ -467,7 +479,7 @@
             "description": "Ano de exercício do orçamento fiscal.\n",
             "constraints": {
               "required": true,
-              "pattern": "^[1-9]\\d{3}$"
+              "pattern": "^[1-2]\\d{3}$"
             }
           },
           {
@@ -593,6 +605,24 @@
             "constraints": {
               "minimum": 0
             }
+          },
+          {
+            "name": "intra_saude",
+            "type": "boolean",
+            "title": "Intraorçamentária de saúde",
+            "description": "Indica se a despesa corresponde a uma operação intraorçamentária de Ações e Serviços Públicos de Saúde (ASPS).\nA LC 141/2012, que regulamenta o art. 198, § 2º da CF/88, determina que as despesas com ASPS sejam financiadas com recursos movimentados por meio dos fundos de saúde.\nDesde 2014, o Estado de Minas Gerais operacionaliza esse processo por meio de operações intraorçamentárias, com transação via Fundo Estadual de Saúde de toda a despesa executada pelas entidades da Administração Indireta.\nAssume `True` quando a despesa se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "asps",
+            "type": "boolean",
+            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
+            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
           }
         ]
       }
@@ -606,15 +636,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:1834a2bf018021e1d4f147682127ebd6f2beb03b11a34070b71aea840155733e",
-      "bytes": 30966132,
-      "fields": 30,
-      "rows": 882571,
-      "dialect": {
-        "csv": {
-          "delimiter": ","
-        }
-      },
+      "hash": "sha256:632732b8fbfd0a48b32d2ae1910ae9a496fe147d347b7126fd96720b89333955",
+      "bytes": 31994865,
+      "fields": 31,
+      "rows": 886448,
       "schema": {
         "fields": [
           {
@@ -624,7 +649,7 @@
             "description": "Ano de exercício do orçamento fiscal.\n",
             "constraints": {
               "required": true,
-              "pattern": "^[1-9]\\d{3}$"
+              "pattern": "^[1-2]\\d{3}$"
             }
           },
           {
@@ -824,7 +849,7 @@
               "99999999999999"
             ],
             "constraints": {
-              "pattern": "^(\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}/\\d{2}|CPF:[0-9a-f]{32})$"
+              "pattern": "^(\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}[/-]\\d{2}|CPF:[0-9a-f]{32})$"
             },
             "anonymize": {
               "method": "aes_siv",
@@ -900,6 +925,15 @@
             "type": "number",
             "title": "Valor Pago Financeiro",
             "description": "Valor referente aos pagamentos efetuados através de movimentações bancárias, escriturais e apropriação contábil da despesa.\nEsse cálculo não inclui valor de anulação de despesa paga.\n"
+          },
+          {
+            "name": "asps",
+            "type": "boolean",
+            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
+            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
           }
         ]
       }
@@ -913,15 +947,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:15162276657f3dcbd6fdc22f6b64481b5819e12e691f1b003a4576b747d70868",
-      "bytes": 2323,
-      "fields": 16,
+      "hash": "sha256:2da600ff2786e424ffc4ed9680970d2e5a2c5ab4b3d4d2a0c730b75727e526cd",
+      "bytes": 2387,
+      "fields": 17,
       "rows": 193,
-      "dialect": {
-        "csv": {
-          "delimiter": ","
-        }
-      },
       "schema": {
         "fields": [
           {
@@ -931,7 +960,7 @@
             "description": "Ano de exercício do orçamento fiscal.\n",
             "constraints": {
               "required": true,
-              "pattern": "^[1-9]\\d{3}$"
+              "pattern": "^[1-2]\\d{3}$"
             }
           },
           {
@@ -1082,6 +1111,15 @@
             "constraints": {
               "minimum": 0
             }
+          },
+          {
+            "name": "asps",
+            "type": "boolean",
+            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
+            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
           }
         ]
       }
@@ -1095,15 +1133,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:aa19b0478771586b3deaa3fadb5ba2688d91a44e5032ba436457188d2cb6cb26",
-      "bytes": 121555,
-      "fields": 11,
-      "rows": 7783,
-      "dialect": {
-        "csv": {
-          "delimiter": ","
-        }
-      },
+      "hash": "sha256:f56839375f860ff7bccf6b4222130b41c37cd9fbfe484c42bade35768df76d7d",
+      "bytes": 143943,
+      "fields": 28,
+      "rows": 7815,
       "schema": {
         "fields": [
           {
@@ -1113,7 +1146,7 @@
             "description": "Ano de exercício do orçamento fiscal.\n",
             "constraints": {
               "required": true,
-              "pattern": "^[1-9]\\d{3}$"
+              "pattern": "^[1-2]\\d{3}$"
             }
           },
           {
@@ -1196,6 +1229,159 @@
             "type": "number",
             "title": "Valor Efetivado Ajustado",
             "description": "Valor, em reais, da receita orçamentária efetivada ajustada.\n"
+          },
+          {
+            "name": "asps",
+            "type": "boolean",
+            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
+            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ibs",
+            "type": "boolean",
+            "title": "Imposto sobre Bens e Serviços (IBS)",
+            "description": "Indica se a receita corresponde à arrecadação do Imposto sobre Bens e Serviços (IBS), instituído pela EC 132/2023 (Reforma Tributária) e regulamentado pela LC 214/2025.\nConsidera a arrecadação bruta, que inclui principal, multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa (naturezas de receita 11165001 a 11165004).\nAplica-se a partir do exercício de 2026.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ibs_acessorias",
+            "type": "boolean",
+            "title": "IBS - Receitas acessórias",
+            "description": "Indica se a receita corresponde às receitas acessórias do Imposto sobre Bens e Serviços (IBS), instituído pela EC 132/2023 (Reforma Tributária) e regulamentado pela LC 214/2025.\nInclui multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa. Não inclui a arrecadação principal (naturezas de receita 11165002 a 11165004).\nAplica-se a partir do exercício de 2026.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ibs_principal",
+            "type": "boolean",
+            "title": "IBS - Principal",
+            "description": "Indica se a receita corresponde à arrecadação principal do Imposto sobre Bens e Serviços (IBS), instituído pela EC 132/2023 (Reforma Tributária) e regulamentado pela LC 214/2025.\nNão inclui multas e juros de mora, dívida ativa nem multas e juros de mora da dívida ativa (natureza de receita 11165001).\nAplica-se a partir do exercício de 2026.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "icms",
+            "type": "boolean",
+            "title": "ICMS - Bruto",
+            "description": "Indica se a receita corresponde à arrecadação bruta do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS).\nInclui principal, multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa, além da parcela destinada ao Fundo de Erradicação da Miséria (FEM).\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "icms_acessorias",
+            "type": "boolean",
+            "title": "ICMS - Receitas acessórias",
+            "description": "Indica se a receita corresponde às receitas acessórias do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS), incluindo a parcela destinada ao Fundo de Erradicação da Miséria (FEM).\nInclui multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa. Não inclui a arrecadação principal.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "icms_principal",
+            "type": "boolean",
+            "title": "ICMS - Principal",
+            "description": "Indica se a receita corresponde à arrecadação principal do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS), incluindo a parcela destinada ao Fundo de Erradicação da Miséria (FEM).\nNão inclui multas e juros de mora, dívida ativa nem multas e juros de mora da dívida ativa.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ipva",
+            "type": "boolean",
+            "title": "IPVA - Bruto",
+            "description": "Indica se a receita corresponde à arrecadação bruta do Imposto sobre a Propriedade de Veículos Automotores (IPVA).\nInclui principal, multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ipva_acessorias",
+            "type": "boolean",
+            "title": "IPVA - Receitas acessórias",
+            "description": "Indica se a receita corresponde às receitas acessórias do Imposto sobre a Propriedade de Veículos Automotores (IPVA).\nInclui multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa. Não inclui a arrecadação principal.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ipva_principal",
+            "type": "boolean",
+            "title": "IPVA - Principal",
+            "description": "Indica se a receita corresponde à arrecadação principal do Imposto sobre a Propriedade de Veículos Automotores (IPVA).\nNão inclui multas e juros de mora, dívida ativa nem multas e juros de mora da dívida ativa.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "irrf",
+            "type": "boolean",
+            "title": "IRRF - Bruto",
+            "description": "Indica se a receita corresponde à arrecadação bruta do Imposto de Renda Retido na Fonte (IRRF) pertencente ao Estado.\nInclui principal, multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa.\nA identificação considera a mudança na codificação das naturezas de receita ocorrida em 2018. Até 2017, apenas a arrecadação principal é identificada.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "irrf_acessorias",
+            "type": "boolean",
+            "title": "IRRF - Receitas acessórias",
+            "description": "Indica se a receita corresponde às receitas acessórias do Imposto de Renda Retido na Fonte (IRRF) pertencente ao Estado.\nInclui multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa. Não inclui a arrecadação principal.\nAplica-se a partir do exercício de 2018.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "irrf_principal",
+            "type": "boolean",
+            "title": "IRRF - Principal",
+            "description": "Indica se a receita corresponde à arrecadação principal do Imposto de Renda Retido na Fonte (IRRF) pertencente ao Estado.\nNão inclui multas e juros de mora, dívida ativa nem multas e juros de mora da dívida ativa.\nA identificação considera a mudança na codificação das naturezas de receita ocorrida em 2018.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "itcd",
+            "type": "boolean",
+            "title": "ITCD - Bruto",
+            "description": "Indica se a receita corresponde à arrecadação bruta do Imposto sobre Transmissão Causa Mortis e Doação de Quaisquer Bens ou Direitos (ITCD).\nInclui principal, multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023. Em 2007, inclui também as naturezas usadas para registrar a cota-parte do FUNDEB, que passou a incluir o ITCD na base de cálculo.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "itcd_acessorias",
+            "type": "boolean",
+            "title": "ITCD - Receitas acessórias",
+            "description": "Indica se a receita corresponde às receitas acessórias do Imposto sobre Transmissão Causa Mortis e Doação de Quaisquer Bens ou Direitos (ITCD).\nInclui multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa. Não inclui a arrecadação principal. Multas e juros de mora da dívida ativa são identificados apenas a partir de 2018.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023. Em 2007, inclui também as naturezas usadas para registrar a cota-parte do FUNDEB.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "itcd_principal",
+            "type": "boolean",
+            "title": "ITCD - Principal",
+            "description": "Indica se a receita corresponde à arrecadação principal do Imposto sobre Transmissão Causa Mortis e Doação de Quaisquer Bens ou Direitos (ITCD).\nNão inclui multas e juros de mora, dívida ativa nem multas e juros de mora da dívida ativa.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023. Em 2007, inclui também a natureza usada para registrar a cota-parte do FUNDEB.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "impostos",
+            "type": "boolean",
+            "title": "Impostos - Bruto",
+            "description": "Indica se a receita corresponde à arrecadação bruta de impostos do Estado.\nConsidera os seguintes impostos:\n- Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS);\n- Imposto sobre a Propriedade de Veículos Automotores (IPVA);\n- Imposto sobre Transmissão Causa Mortis e Doação de Quaisquer Bens ou Direitos (ITCD);\n- Imposto de Renda Retido na Fonte (IRRF) pertencente ao Estado;\n- Imposto sobre Bens e Serviços (IBS), a partir de 2026.\nInclui principal, multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa.\nO cálculo é igual ao publicado nos Relatórios Resumidos da Execução Orçamentária (RREO) de 2014 a 2018. Os RREO de 2014 a 2017 discriminam apenas a arrecadação principal de cada imposto. A partir de 2018, consideram a arrecadação bruta.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
           }
         ]
       }
@@ -1209,15 +1395,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:6fc977efaa3a8c27648d35130ec2dedb31bed4c66893cbc3fba3617965591291",
-      "bytes": 8512553,
-      "fields": 45,
-      "rows": 216230,
-      "dialect": {
-        "csv": {
-          "delimiter": ","
-        }
-      },
+      "hash": "sha256:fb230079a44049421498ca6aaa73396720fcb6f074e3e25c20bc5c189f82ba1c",
+      "bytes": 8743679,
+      "fields": 46,
+      "rows": 216278,
       "schema": {
         "fields": [
           {
@@ -1227,7 +1408,7 @@
             "description": "Ano de exercício do orçamento fiscal.\n",
             "constraints": {
               "required": true,
-              "pattern": "^[1-9]\\d{3}$"
+              "pattern": "^[1-2]\\d{3}$"
             }
           },
           {
@@ -1236,7 +1417,7 @@
             "title": "Ano Origem Restos a Pagar",
             "description": "Ano de origem do documento de Restos a Pagar.\n",
             "constraints": {
-              "pattern": "^[1-9]\\d{3}$"
+              "pattern": "^[1-2]\\d{3}$"
             }
           },
           {
@@ -1424,7 +1605,7 @@
               "99999999999999"
             ],
             "constraints": {
-              "pattern": "^(\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}/\\d{2}|CPF:[0-9a-f]{32})$"
+              "pattern": "^(\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}[/-]\\d{2}|CPF:[0-9a-f]{32})$"
             },
             "anonymize": {
               "method": "aes_siv",
@@ -1630,6 +1811,15 @@
             "type": "number",
             "title": "Valor Retenção Não Processado",
             "description": "Valor, em reais, de Restos a Pagar não processado de Ordem de Pagamento.\n"
+          },
+          {
+            "name": "asps",
+            "type": "boolean",
+            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
+            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
           }
         ]
       }
@@ -1643,15 +1833,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:caf5b546bb56bc28eebbd83ae2052770af3702957d7cc64967180d6f7f9c65ef",
-      "bytes": 8433,
-      "fields": 13,
+      "hash": "sha256:7e074b14e0e346fe9661691b0348c523b1900ce98661b1fbd74a89444d3e255f",
+      "bytes": 8806,
+      "fields": 15,
       "rows": 795,
-      "dialect": {
-        "csv": {
-          "delimiter": ","
-        }
-      },
       "schema": {
         "fields": [
           {
@@ -1661,7 +1846,7 @@
             "description": "Ano de exercício do orçamento fiscal.\n",
             "constraints": {
               "required": true,
-              "pattern": "^[1-9]\\d{3}$"
+              "pattern": "^[1-2]\\d{3}$"
             }
           },
           {
@@ -1679,7 +1864,7 @@
             "title": "Ano Origem Folha Pagamento",
             "description": "Ano de origem do documento de folha de pagamento inscrita em Restos a Pagar.\n",
             "constraints": {
-              "pattern": "^[1-9]\\d{3}$"
+              "pattern": "^[1-2]\\d{3}$"
             }
           },
           {
@@ -1774,11 +1959,58 @@
             "type": "number",
             "title": "Valor Despesa Liquidada a Pagar - Folha",
             "description": "Valor, em reais, do saldo a pagar processado de folha de pagamento.\n"
+          },
+          {
+            "name": "intra_saude",
+            "type": "boolean",
+            "title": "Intraorçamentária de saúde",
+            "description": "Indica se a despesa corresponde a uma operação intraorçamentária de Ações e Serviços Públicos de Saúde (ASPS).\nA LC 141/2012, que regulamenta o art. 198, § 2º da CF/88, determina que as despesas com ASPS sejam financiadas com recursos movimentados por meio dos fundos de saúde.\nDesde 2014, o Estado de Minas Gerais operacionaliza esse processo por meio de operações intraorçamentárias, com transação via Fundo Estadual de Saúde de toda a despesa executada pelas entidades da Administração Indireta.\nAssume `True` quando a despesa se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "asps",
+            "type": "boolean",
+            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
+            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
           }
         ]
       }
     }
   ],
   "owner_org": "secretaria-de-estado-de-planejamento-e-gestao-seplag",
-  "updated_at": "2026-10-08T17:34:51"
+  "custom": [
+    {
+      "sources": [
+        {
+          "id": "relatorios",
+          "source": "https://github.com/splor-mg/regras-orcamentarias-mg/tree/main/rules/DCAF/relatorios"
+        }
+      ]
+    },
+    {
+      "flows": [
+        {
+          "id": "receita",
+          "description": "regras para aplicação nos recursos: receita",
+          "rules": [
+            "is_asps_rec",
+            "is_impostos"
+          ]
+        },
+        {
+          "id": "despesa",
+          "description": "regras para aplicação nos recursos: execucao, cota, credito",
+          "rules": [
+            "is_asps_desp"
+          ]
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-10-09T17:10:54"
 }

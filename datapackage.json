@@ -11,10 +11,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:0a11115f268d829c48d8e8c3cba3f14f3a7da936079d69b5ce37a801dd5a479f",
-      "bytes": 327712,
-      "fields": 34,
-      "rows": 7199,
+      "hash": "sha256:77885704a1c557eb4f2c04c7f5463646b6244df92a9b3945e6398c57ed8ca00f",
+      "bytes": 122617,
+      "fields": 24,
+      "rows": 7340,
       "schema": {
         "fields": [
           {
@@ -61,12 +61,8 @@
             "type": "string",
             "title": "Decreto Alteração Orçamentária",
             "description": "Número do decreto de autorização da alteração orçamentária, gerado pelo SIAFI-MG.\n",
-            "missingValues": [
-              "0",
-              "9999999"
-            ],
             "constraints": {
-              "pattern": "^([1-9]\\d{0,5})$"
+              "pattern": "^(0|[1-9]\\d{0,2})$"
             }
           },
           {
@@ -75,7 +71,7 @@
             "title": "Lei Aprovação Orçamento",
             "description": "Número da lei de aprovação do Orçamento do Estado.\n",
             "constraints": {
-              "pattern": "^(0|[1-9]\\d{0,5})$"
+              "pattern": "^(0|[1-9]\\d{0,4})$"
             }
           },
           {
@@ -98,24 +94,6 @@
             }
           },
           {
-            "name": "uo_sigla",
-            "type": "string",
-            "title": "Unidade Orçamentária - Sigla",
-            "description": "Nome abreviado ou sigla da unidade orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "uo_nome",
-            "type": "string",
-            "title": "Unidade Orçamentária - Nome",
-            "description": "Nome completo da Unidade Orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "funcao_cod",
             "type": "string",
             "title": "Função - Código",
@@ -125,30 +103,12 @@
             }
           },
           {
-            "name": "funcao_desc",
-            "type": "string",
-            "title": "Função - Descrição",
-            "description": "Descrição do nível máximo de agregação das ações do Governo.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "programa_cod",
             "type": "string",
             "title": "Programa - Código",
             "description": "Código identificador do objeto concreto, bem ou serviço que se quer atingir.\nO programa representa uma política pública que visa o enfrentamento de um problema ou oportunidade, sendo mensurado por indicadores.\n",
             "constraints": {
               "pattern": "^\\d{1,3}$"
-            }
-          },
-          {
-            "name": "programa_desc",
-            "type": "string",
-            "title": "Programa - Descrição",
-            "description": "Descrição do objetivo contreto, bem ou serviço que se quer atingir.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -165,30 +125,12 @@
             }
           },
           {
-            "name": "acao_desc",
-            "type": "string",
-            "title": "Ação - Descrição",
-            "description": "Descrição do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
             "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
-              "pattern": "^([0-6]|9)$"
-            }
-          },
-          {
-            "name": "grupo_desc",
-            "type": "string",
-            "title": "Grupo Despesa - Descrição",
-            "description": "Descrição do grupo de natureza econômica da despesa.\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^([1-6]|9)$"
             }
           },
           {
@@ -205,30 +147,12 @@
             }
           },
           {
-            "name": "modalidade_desc",
-            "type": "string",
-            "title": "Modalidade Aplicação - Descrição",
-            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "iag_cod",
             "type": "string",
             "title": "Identificador Orçamento - Código",
             "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
             "constraints": {
-              "pattern": "^[0-7]$"
-            }
-          },
-          {
-            "name": "iag_desc",
-            "type": "string",
-            "title": "Identificador Orçamento - Descrição",
-            "description": ".\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^[0-6]$"
             }
           },
           {
@@ -242,30 +166,12 @@
             }
           },
           {
-            "name": "fonte_desc",
-            "type": "string",
-            "title": "Fonte Recurso - Descrição",
-            "description": "Descrição da fonte dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
             "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
             "constraints": {
               "pattern": "^\\d{1}$"
-            }
-          },
-          {
-            "name": "ipu_desc",
-            "type": "string",
-            "title": "Procedência - Descrição",
-            "description": "Descrição da procedência dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -290,19 +196,28 @@
             "name": "vlr_suplementacao",
             "type": "number",
             "title": "Valor Suplementação",
-            "description": "Valor, em reais, destinado a reforço de dotação orçamentária.\n"
+            "description": "Valor, em reais, destinado a reforço de dotação orçamentária.\n",
+            "constraints": {
+              "minimum": 0
+            }
           },
           {
             "name": "vlr_anulacao",
             "type": "number",
             "title": "Valor Anulação Crédito",
-            "description": "Valor, em reais, da anulação de crédito na dotação orçamentária.\n"
+            "description": "Valor, em reais, da anulação de crédito na dotação orçamentária.\n",
+            "constraints": {
+              "minimum": 0
+            }
           },
           {
             "name": "vlr_credito_inicial",
             "type": "number",
             "title": "Valor Crédito Inicial",
-            "description": "Valor, em reais, do crédito orçamentário aprovado pela Lei Orçamentária.\n"
+            "description": "Valor, em reais, do crédito orçamentário aprovado pela Lei Orçamentária.\n",
+            "constraints": {
+              "minimum": 0
+            }
           },
           {
             "name": "vlr_credito_autorizado",
@@ -340,10 +255,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:86e1a38e66ec88ad871dabb5456062174a0d933bc65bfa98551b70260c6b753b",
-      "bytes": 800537,
-      "fields": 29,
-      "rows": 32962,
+      "hash": "sha256:5d833eb25bf547a185ce88785823318a1657f1b1f671ef24ceef665c6d99eacc",
+      "bytes": 509786,
+      "fields": 20,
+      "rows": 34112,
       "schema": {
         "fields": [
           {
@@ -376,24 +291,6 @@
             }
           },
           {
-            "name": "uo_sigla",
-            "type": "string",
-            "title": "Unidade Orçamentária - Sigla",
-            "description": "Nome abreviado ou sigla da unidade orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "uo_nome",
-            "type": "string",
-            "title": "Unidade Orçamentária - Nome",
-            "description": "Nome completo da Unidade Orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "ue_cod",
             "type": "string",
             "title": "Unidade Executora - Código",
@@ -416,30 +313,12 @@
             }
           },
           {
-            "name": "acao_desc",
-            "type": "string",
-            "title": "Ação - Descrição",
-            "description": "Descrição do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
             "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
-              "pattern": "^([0-6]|9)$"
-            }
-          },
-          {
-            "name": "grupo_desc",
-            "type": "string",
-            "title": "Grupo Despesa - Descrição",
-            "description": "Descrição do grupo de natureza econômica da despesa.\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^([1-6]|9)$"
             }
           },
           {
@@ -456,30 +335,12 @@
             }
           },
           {
-            "name": "modalidade_desc",
-            "type": "string",
-            "title": "Modalidade Aplicação - Descrição",
-            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "iag_cod",
             "type": "string",
             "title": "Identificador Orçamento - Código",
             "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
             "constraints": {
-              "pattern": "^[0-7]$"
-            }
-          },
-          {
-            "name": "iag_desc",
-            "type": "string",
-            "title": "Identificador Orçamento - Descrição",
-            "description": ".\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^[0-6]$"
             }
           },
           {
@@ -493,30 +354,12 @@
             }
           },
           {
-            "name": "fonte_desc",
-            "type": "string",
-            "title": "Fonte Recurso - Descrição",
-            "description": "Descrição da fonte dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
             "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
             "constraints": {
               "pattern": "^\\d{1}$"
-            }
-          },
-          {
-            "name": "ipu_desc",
-            "type": "string",
-            "title": "Procedência - Descrição",
-            "description": "Descrição da procedência dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -530,15 +373,6 @@
             ],
             "constraints": {
               "pattern": "^[1-9]\\d{0,3}$"
-            }
-          },
-          {
-            "name": "elemento_item_desc",
-            "type": "string",
-            "title": "Elemento Item Despesa - Descrição",
-            "description": "Descrição do elemento item de despesa.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -575,14 +409,17 @@
             "title": "Documento Aprovação Cota",
             "description": "Número do documento de aprovação da cota orçamentária.\n",
             "constraints": {
-              "pattern": "^[1-9]\\d{0,6}$"
+              "pattern": "^[1-9]\\d{0,4}$"
             }
           },
           {
             "name": "vlr_cota_aprovada",
             "type": "number",
             "title": "Valor Cota Aprovada",
-            "description": "Valor, em reais, da cota aprovada.\n"
+            "description": "Valor, em reais, da cota aprovada.\n",
+            "constraints": {
+              "minimum": 0
+            }
           },
           {
             "name": "vlr_cota_cancelada",
@@ -629,10 +466,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:d0baabefb3c70c43e1a918f889bd8dccf347abe1965893e7702e404c0d5f19bc",
-      "bytes": 172949,
-      "fields": 27,
-      "rows": 3294,
+      "hash": "sha256:467d12d3bc82c538b72c88cf3bdfa45756f9a2dd8575634ad274284b9774719f",
+      "bytes": 56750,
+      "fields": 16,
+      "rows": 3307,
       "schema": {
         "fields": [
           {
@@ -656,39 +493,12 @@
             }
           },
           {
-            "name": "uo_sigla",
-            "type": "string",
-            "title": "Unidade Orçamentária - Sigla",
-            "description": "Nome abreviado ou sigla da unidade orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "uo_nome",
-            "type": "string",
-            "title": "Unidade Orçamentária - Nome",
-            "description": "Nome completo da Unidade Orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "funcao_cod",
             "type": "string",
             "title": "Função - Código",
             "description": "Código identificador do nível máximo de agregação das ações do Governo.\nTem como objetivo consolidar em que áreas de atuação do setor público são gastos os recursos orçamentários, tendo como critério a natureza do objeto da ação.\nPortanto, visa a agregar ações que tenham objetos correlatos.\nUm programa pode ter ações atreladas a distintas funções, assim como uma unidade orçamentária, mas cada ação só pode ter uma única função.\n",
             "constraints": {
               "pattern": "^\\d{1,2}$"
-            }
-          },
-          {
-            "name": "funcao_desc",
-            "type": "string",
-            "title": "Função - Descrição",
-            "description": "Descrição do nível máximo de agregação das ações do Governo.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -701,30 +511,12 @@
             }
           },
           {
-            "name": "subfuncao_desc",
-            "type": "string",
-            "title": "Subfunção - Descrição",
-            "description": "Descrição do detalhamento das áreas de atuação do Governo.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "programa_cod",
             "type": "string",
             "title": "Programa - Código",
             "description": "Código identificador do objeto concreto, bem ou serviço que se quer atingir.\nO programa representa uma política pública que visa o enfrentamento de um problema ou oportunidade, sendo mensurado por indicadores.\n",
             "constraints": {
               "pattern": "^\\d{1,3}$"
-            }
-          },
-          {
-            "name": "programa_desc",
-            "type": "string",
-            "title": "Programa - Descrição",
-            "description": "Descrição do objetivo contreto, bem ou serviço que se quer atingir.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -741,30 +533,12 @@
             }
           },
           {
-            "name": "acao_desc",
-            "type": "string",
-            "title": "Ação - Descrição",
-            "description": "Descrição do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
             "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
-              "pattern": "^([0-6]|9)$"
-            }
-          },
-          {
-            "name": "grupo_desc",
-            "type": "string",
-            "title": "Grupo Despesa - Descrição",
-            "description": "Descrição do grupo de natureza econômica da despesa.\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^([1-6]|9)$"
             }
           },
           {
@@ -781,30 +555,12 @@
             }
           },
           {
-            "name": "modalidade_desc",
-            "type": "string",
-            "title": "Modalidade Aplicação - Descrição",
-            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "iag_cod",
             "type": "string",
             "title": "Identificador Orçamento - Código",
             "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
             "constraints": {
-              "pattern": "^[0-7]$"
-            }
-          },
-          {
-            "name": "iag_desc",
-            "type": "string",
-            "title": "Identificador Orçamento - Descrição",
-            "description": ".\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^[0-6]$"
             }
           },
           {
@@ -818,15 +574,6 @@
             }
           },
           {
-            "name": "fonte_desc",
-            "type": "string",
-            "title": "Fonte Recurso - Descrição",
-            "description": "Descrição da fonte dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
@@ -836,19 +583,13 @@
             }
           },
           {
-            "name": "ipu_desc",
-            "type": "string",
-            "title": "Procedência - Descrição",
-            "description": "Descrição da procedência dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "vlr_credito_inicial",
             "type": "number",
             "title": "Valor Crédito Inicial",
-            "description": "Valor, em reais, do crédito orçamentário aprovado pela Lei Orçamentária.\n"
+            "description": "Valor, em reais, do crédito orçamentário aprovado pela Lei Orçamentária.\n",
+            "constraints": {
+              "minimum": 0
+            }
           },
           {
             "name": "vlr_credito_autorizado",
@@ -895,10 +636,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:95237f3df58265851894bdf26dca1d70bbf4e16e4216e766ce18877c8399bbac",
-      "bytes": 72235456,
-      "fields": 45,
-      "rows": 932587,
+      "hash": "sha256:242c60b8ff4ef798708834ab83601ff071cd1068f062f43363caef39cef10d09",
+      "bytes": 35555401,
+      "fields": 31,
+      "rows": 965039,
       "schema": {
         "fields": [
           {
@@ -931,24 +672,6 @@
             }
           },
           {
-            "name": "uo_sigla",
-            "type": "string",
-            "title": "Unidade Orçamentária - Sigla",
-            "description": "Nome abreviado ou sigla da unidade orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "uo_nome",
-            "type": "string",
-            "title": "Unidade Orçamentária - Nome",
-            "description": "Nome completo da Unidade Orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "ue_cod",
             "type": "string",
             "title": "Unidade Executora - Código",
@@ -976,25 +699,12 @@
             }
           },
           {
-            "name": "uo_fin_nome",
-            "type": "string"
-          },
-          {
             "name": "funcao_cod",
             "type": "string",
             "title": "Função - Código",
             "description": "Código identificador do nível máximo de agregação das ações do Governo.\nTem como objetivo consolidar em que áreas de atuação do setor público são gastos os recursos orçamentários, tendo como critério a natureza do objeto da ação.\nPortanto, visa a agregar ações que tenham objetos correlatos.\nUm programa pode ter ações atreladas a distintas funções, assim como uma unidade orçamentária, mas cada ação só pode ter uma única função.\n",
             "constraints": {
               "pattern": "^\\d{1,2}$"
-            }
-          },
-          {
-            "name": "funcao_desc",
-            "type": "string",
-            "title": "Função - Descrição",
-            "description": "Descrição do nível máximo de agregação das ações do Governo.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -1007,30 +717,12 @@
             }
           },
           {
-            "name": "subfuncao_desc",
-            "type": "string",
-            "title": "Subfunção - Descrição",
-            "description": "Descrição do detalhamento das áreas de atuação do Governo.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "programa_cod",
             "type": "string",
             "title": "Programa - Código",
             "description": "Código identificador do objeto concreto, bem ou serviço que se quer atingir.\nO programa representa uma política pública que visa o enfrentamento de um problema ou oportunidade, sendo mensurado por indicadores.\n",
             "constraints": {
               "pattern": "^\\d{1,3}$"
-            }
-          },
-          {
-            "name": "programa_desc",
-            "type": "string",
-            "title": "Programa - Descrição",
-            "description": "Descrição do objetivo contreto, bem ou serviço que se quer atingir.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -1047,30 +739,12 @@
             }
           },
           {
-            "name": "acao_desc",
-            "type": "string",
-            "title": "Ação - Descrição",
-            "description": "Descrição do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
             "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
-              "pattern": "^([0-6]|9)$"
-            }
-          },
-          {
-            "name": "grupo_desc",
-            "type": "string",
-            "title": "Grupo Despesa - Descrição",
-            "description": "Descrição do grupo de natureza econômica da despesa.\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^([1-6]|9)$"
             }
           },
           {
@@ -1087,30 +761,12 @@
             }
           },
           {
-            "name": "modalidade_desc",
-            "type": "string",
-            "title": "Modalidade Aplicação - Descrição",
-            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "iag_cod",
             "type": "string",
             "title": "Identificador Orçamento - Código",
             "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
             "constraints": {
-              "pattern": "^[0-7]$"
-            }
-          },
-          {
-            "name": "iag_desc",
-            "type": "string",
-            "title": "Identificador Orçamento - Descrição",
-            "description": ".\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^[0-6]$"
             }
           },
           {
@@ -1124,30 +780,12 @@
             }
           },
           {
-            "name": "fonte_desc",
-            "type": "string",
-            "title": "Fonte Recurso - Descrição",
-            "description": "Descrição da fonte dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
             "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
             "constraints": {
               "pattern": "^\\d{1}$"
-            }
-          },
-          {
-            "name": "ipu_desc",
-            "type": "string",
-            "title": "Procedência - Descrição",
-            "description": "Descrição da procedência dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -1161,15 +799,6 @@
             ],
             "constraints": {
               "pattern": "^[1-9]\\d{0,3}$"
-            }
-          },
-          {
-            "name": "elemento_item_desc",
-            "type": "string",
-            "title": "Elemento Item Despesa - Descrição",
-            "description": "Descrição do elemento item de despesa.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -1217,20 +846,15 @@
             "title": "CNPJ/CPF Credor - Formatado",
             "description": "Código formatado do CNPJ ou CPF do credor.\n",
             "missingValues": [
-              "0",
               "99999999999999"
             ],
             "constraints": {
               "pattern": "^(\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}[/-]\\d{2}|CPF:[0-9a-f]{32})$"
-            }
-          },
-          {
-            "name": "razao_social_credor",
-            "type": "string",
-            "title": "Razão Social Credor",
-            "description": "Razão social do credor.\n",
-            "constraints": {
-              "maxLength": 500
+            },
+            "anonymize": {
+              "method": "aes_siv",
+              "annotation": "CPF:11",
+              "filter": "len([c for c in cnpj_cpf_formatado if c.isdigit()]) == 11"
             }
           },
           {
@@ -1291,7 +915,10 @@
             "name": "vlr_pago_orcamentario",
             "type": "number",
             "title": "Valor Pago Orçamentário",
-            "description": "Valor pago, por empenho.\n"
+            "description": "Valor pago, por empenho.\n",
+            "constraints": {
+              "minimum": 0
+            }
           },
           {
             "name": "vlr_pago_financeiro",
@@ -1320,10 +947,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:fe0e662faa6c52a2b350d7f954031a76060b12982804ca2a223ec88d4bbd943e",
-      "bytes": 5053,
-      "fields": 27,
-      "rows": 205,
+      "hash": "sha256:1d33a8908acc22187240b745a4f0244384c10ef27f277d44db348973f6c84fc1",
+      "bytes": 3113,
+      "fields": 17,
+      "rows": 260,
       "schema": {
         "fields": [
           {
@@ -1374,39 +1001,12 @@
             }
           },
           {
-            "name": "uo_sigla",
-            "type": "string",
-            "title": "Unidade Orçamentária - Sigla",
-            "description": "Nome abreviado ou sigla da unidade orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "uo_nome",
-            "type": "string",
-            "title": "Unidade Orçamentária - Nome",
-            "description": "Nome completo da Unidade Orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "funcao_cod",
             "type": "string",
             "title": "Função - Código",
             "description": "Código identificador do nível máximo de agregação das ações do Governo.\nTem como objetivo consolidar em que áreas de atuação do setor público são gastos os recursos orçamentários, tendo como critério a natureza do objeto da ação.\nPortanto, visa a agregar ações que tenham objetos correlatos.\nUm programa pode ter ações atreladas a distintas funções, assim como uma unidade orçamentária, mas cada ação só pode ter uma única função.\n",
             "constraints": {
               "pattern": "^\\d{1,2}$"
-            }
-          },
-          {
-            "name": "funcao_desc",
-            "type": "string",
-            "title": "Função - Descrição",
-            "description": "Descrição do nível máximo de agregação das ações do Governo.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -1423,30 +1023,12 @@
             }
           },
           {
-            "name": "acao_desc",
-            "type": "string",
-            "title": "Ação - Descrição",
-            "description": "Descrição do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
             "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
-              "pattern": "^([0-6]|9)$"
-            }
-          },
-          {
-            "name": "grupo_desc",
-            "type": "string",
-            "title": "Grupo Despesa - Descrição",
-            "description": "Descrição do grupo de natureza econômica da despesa.\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^([1-6]|9)$"
             }
           },
           {
@@ -1463,30 +1045,12 @@
             }
           },
           {
-            "name": "modalidade_desc",
-            "type": "string",
-            "title": "Modalidade Aplicação - Descrição",
-            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "iag_cod",
             "type": "string",
             "title": "Identificador Orçamento - Código",
             "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
             "constraints": {
-              "pattern": "^[0-7]$"
-            }
-          },
-          {
-            "name": "iag_desc",
-            "type": "string",
-            "title": "Identificador Orçamento - Descrição",
-            "description": ".\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^[0-6]$"
             }
           },
           {
@@ -1500,30 +1064,12 @@
             }
           },
           {
-            "name": "fonte_desc",
-            "type": "string",
-            "title": "Fonte Recurso - Descrição",
-            "description": "Descrição da fonte dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
             "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
             "constraints": {
               "pattern": "^\\d{1}$"
-            }
-          },
-          {
-            "name": "ipu_desc",
-            "type": "string",
-            "title": "Procedência - Descrição",
-            "description": "Descrição da procedência dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -1537,15 +1083,6 @@
             ],
             "constraints": {
               "pattern": "^[1-9]\\d{0,3}$"
-            }
-          },
-          {
-            "name": "elemento_item_desc",
-            "type": "string",
-            "title": "Elemento Item Despesa - Descrição",
-            "description": "Descrição do elemento item de despesa.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -1596,10 +1133,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:4350286be9902e79921129af8888d2f95f0480b3ad03e9188a66b5978ccf9310",
-      "bytes": 291969,
-      "fields": 32,
-      "rows": 7946,
+      "hash": "sha256:69e069940cf45ba0b82dd3c066c0d11612f86dc8a35768ffe34636fb93e7df99",
+      "bytes": 152451,
+      "fields": 28,
+      "rows": 8335,
       "schema": {
         "fields": [
           {
@@ -1632,24 +1169,6 @@
             }
           },
           {
-            "name": "uo_sigla",
-            "type": "string",
-            "title": "Unidade Orçamentária - Sigla",
-            "description": "Nome abreviado ou sigla da unidade orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "uo_nome",
-            "type": "string",
-            "title": "Unidade Orçamentária - Nome",
-            "description": "Nome completo da Unidade Orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "fonte_cod",
             "type": "string",
             "title": "Fonte Recurso - Código",
@@ -1657,15 +1176,6 @@
             "constraints": {
               "required": true,
               "pattern": "^(0|[1-9]\\d{0,1})$"
-            }
-          },
-          {
-            "name": "fonte_desc",
-            "type": "string",
-            "title": "Fonte Recurso - Descrição",
-            "description": "Descrição da fonte dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -1679,21 +1189,12 @@
             }
           },
           {
-            "name": "receita_desc",
-            "type": "string",
-            "title": "Classificação Receita - Descrição",
-            "description": "Descrição da Classificação da Receita.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "receita_cod_formatado",
             "type": "string",
             "title": "Classificação Receita - Formatado",
             "description": "Código da Classificação Receita Formatado.\n",
             "constraints": {
-              "pattern": "^(\\d{4}\\.\\d{2}\\.\\d{1}\\.\\d{1}\\.\\d{2}\\.\\d{3}|\\d{1}\\.\\d{1}\\.\\d{1}\\.\\d{1}\\.\\d{2}\\.\\d{2}\\.\\d{2})$"
+              "pattern": "^\\d{4}\\.\\d{2}\\.\\d{1}\\.\\d{1}\\.\\d{2}\\.\\d{3}$"
             }
           },
           {
@@ -1706,7 +1207,10 @@
             "name": "vlr_previsto_adicional",
             "type": "number",
             "title": "Valor Previsto Adicional",
-            "description": "Valor, em reais, da previsão adicional da receita.\n"
+            "description": "Valor, em reais, da previsão adicional da receita.\n",
+            "constraints": {
+              "minimum": 0
+            }
           },
           {
             "name": "vlr_previsto_atualizado",
@@ -1891,10 +1395,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:43905bcf47caab31d55f3021c3ed42dac55983b3fd6e2b0ba166b0123a7d36b0",
-      "bytes": 12260004,
-      "fields": 55,
-      "rows": 217633,
+      "hash": "sha256:4f105332c43fa51f0cfcb45f6a495f60bc9fc8da0e3d7a890b078b4136bc8924",
+      "bytes": 6979121,
+      "fields": 43,
+      "rows": 218847,
       "schema": {
         "fields": [
           {
@@ -1936,24 +1440,6 @@
             }
           },
           {
-            "name": "uo_sigla",
-            "type": "string",
-            "title": "Unidade Orçamentária - Sigla",
-            "description": "Nome abreviado ou sigla da unidade orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "uo_nome",
-            "type": "string",
-            "title": "Unidade Orçamentária - Nome",
-            "description": "Nome completo da Unidade Orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "ue_cod",
             "type": "string",
             "title": "Unidade Executora - Código",
@@ -1970,10 +1456,6 @@
             "constraints": {
               "pattern": "^(0|[1-9]\\d{3})$"
             }
-          },
-          {
-            "name": "uo_fin_nome",
-            "type": "string"
           },
           {
             "name": "upg_cod",
@@ -1994,15 +1476,6 @@
             }
           },
           {
-            "name": "funcao_desc",
-            "type": "string",
-            "title": "Função - Descrição",
-            "description": "Descrição do nível máximo de agregação das ações do Governo.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "acao_cod",
             "type": "string",
             "title": "Ação - Código",
@@ -2016,30 +1489,12 @@
             }
           },
           {
-            "name": "acao_desc",
-            "type": "string",
-            "title": "Ação - Descrição",
-            "description": "Descrição do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
             "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
-              "pattern": "^([0-6]|9)$"
-            }
-          },
-          {
-            "name": "grupo_desc",
-            "type": "string",
-            "title": "Grupo Despesa - Descrição",
-            "description": "Descrição do grupo de natureza econômica da despesa.\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^([1-6]|9)$"
             }
           },
           {
@@ -2056,30 +1511,12 @@
             }
           },
           {
-            "name": "modalidade_desc",
-            "type": "string",
-            "title": "Modalidade Aplicação - Descrição",
-            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "iag_cod",
             "type": "string",
             "title": "Identificador Orçamento - Código",
             "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
             "constraints": {
-              "pattern": "^[0-7]$"
-            }
-          },
-          {
-            "name": "iag_desc",
-            "type": "string",
-            "title": "Identificador Orçamento - Descrição",
-            "description": ".\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^[0-6]$"
             }
           },
           {
@@ -2093,30 +1530,12 @@
             }
           },
           {
-            "name": "fonte_desc",
-            "type": "string",
-            "title": "Fonte Recurso - Descrição",
-            "description": "Descrição da fonte dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
             "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
             "constraints": {
               "pattern": "^\\d{1}$"
-            }
-          },
-          {
-            "name": "ipu_desc",
-            "type": "string",
-            "title": "Procedência - Descrição",
-            "description": "Descrição da procedência dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -2151,15 +1570,6 @@
             }
           },
           {
-            "name": "elemento_item_desc",
-            "type": "string",
-            "title": "Elemento Item Despesa - Descrição",
-            "description": "Descrição do elemento item de despesa.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "num_empenho",
             "type": "string",
             "title": "Número Empenho",
@@ -2174,20 +1584,15 @@
             "title": "CNPJ/CPF Credor - Formatado",
             "description": "Código formatado do CNPJ ou CPF do credor.\n",
             "missingValues": [
-              "0",
               "99999999999999"
             ],
             "constraints": {
               "pattern": "^(\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}[/-]\\d{2}|CPF:[0-9a-f]{32})$"
-            }
-          },
-          {
-            "name": "razao_social_credor",
-            "type": "string",
-            "title": "Razão Social Credor",
-            "description": "Razão social do credor.\n",
-            "constraints": {
-              "maxLength": 500
+            },
+            "anonymize": {
+              "method": "aes_siv",
+              "annotation": "CPF:11",
+              "filter": "len([c for c in cnpj_cpf_formatado if c.isdigit()]) == 11"
             }
           },
           {
@@ -2326,7 +1731,10 @@
             "name": "vlr_anulacao_pagamento_rpp",
             "type": "number",
             "title": "Valor Anulação Pagamento Processado",
-            "description": "Valor, em reais, da anulação da despesa através da devolução, do Pagamento de restos a pagar processado.\n"
+            "description": "Valor, em reais, da anulação da despesa através da devolução, do Pagamento de restos a pagar processado.\n",
+            "constraints": {
+              "minimum": 0
+            }
           },
           {
             "name": "vlr_retencao_rpp",
@@ -2394,10 +1802,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:23a81e904e55a6032ea3070850a5a36de7b1de48738f74cf0d75870dafa46542",
-      "bytes": 15164,
-      "fields": 22,
-      "rows": 796,
+      "hash": "sha256:02e7d87f1b5d2f2c527c34f8aa5ae4ed45ca9d5d5bca8664be663422480e35a2",
+      "bytes": 8891,
+      "fields": 15,
+      "rows": 801,
       "schema": {
         "fields": [
           {
@@ -2439,39 +1847,12 @@
             }
           },
           {
-            "name": "uo_sigla",
-            "type": "string",
-            "title": "Unidade Orçamentária - Sigla",
-            "description": "Nome abreviado ou sigla da unidade orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "uo_nome",
-            "type": "string",
-            "title": "Unidade Orçamentária - Nome",
-            "description": "Nome completo da Unidade Orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "grupo_cod",
             "type": "string",
             "title": "Grupo Despesa - Código",
             "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
             "constraints": {
-              "pattern": "^([0-6]|9)$"
-            }
-          },
-          {
-            "name": "grupo_desc",
-            "type": "string",
-            "title": "Grupo Despesa - Descrição",
-            "description": "Descrição do grupo de natureza econômica da despesa.\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^([1-6]|9)$"
             }
           },
           {
@@ -2488,30 +1869,12 @@
             }
           },
           {
-            "name": "modalidade_desc",
-            "type": "string",
-            "title": "Modalidade Aplicação - Descrição",
-            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "iag_cod",
             "type": "string",
             "title": "Identificador Orçamento - Código",
             "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
             "constraints": {
-              "pattern": "^[0-7]$"
-            }
-          },
-          {
-            "name": "iag_desc",
-            "type": "string",
-            "title": "Identificador Orçamento - Descrição",
-            "description": ".\n",
-            "constraints": {
-              "maxLength": 500
+              "pattern": "^[0-6]$"
             }
           },
           {
@@ -2525,30 +1888,12 @@
             }
           },
           {
-            "name": "fonte_desc",
-            "type": "string",
-            "title": "Fonte Recurso - Descrição",
-            "description": "Descrição da fonte dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "ipu_cod",
             "type": "string",
             "title": "Procedência - Código",
             "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
             "constraints": {
               "pattern": "^\\d{1}$"
-            }
-          },
-          {
-            "name": "ipu_desc",
-            "type": "string",
-            "title": "Procedência - Descrição",
-            "description": "Descrição da procedência dos recursos financeiros.\n",
-            "constraints": {
-              "maxLength": 500
             }
           },
           {
@@ -2573,7 +1918,10 @@
             "name": "vlr_pago_folha",
             "type": "number",
             "title": "Valor Pago Folha",
-            "description": "Valor pago, em reais, referente a valor inscrito processado de folha de pagamento, total ou parcial.\n"
+            "description": "Valor pago, em reais, referente a valor inscrito processado de folha de pagamento, total ou parcial.\n",
+            "constraints": {
+              "minimum": 0
+            }
           },
           {
             "name": "vlr_despesa_liquidada_pagar_folha",
@@ -2633,5 +1981,5 @@
       ]
     }
   ],
-  "updated_at": "2026-10-26T14:51:25"
+  "updated_at": "2026-11-04T17:59:19"
 }

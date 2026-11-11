@@ -11,10 +11,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:8644955e0f235c495ca4f5bb5fc3fbd0f4d45ae78a1521328a3e761504f0ed2f",
-      "bytes": 340312,
+      "hash": "sha256:d3833afbf2953d1b2d655f9cc94a5b15047db133b1cd2d40559e3462de54a0b6",
+      "bytes": 340761,
       "fields": 34,
-      "rows": 7464,
+      "rows": 7472,
       "schema": {
         "fields": [
           {
@@ -311,19 +311,19 @@
             "description": "Valor total, em reais, correspondente ao somatório dos créditos disponíveis para a execução da despesa.\n"
           },
           {
-            "name": "asps",
+            "name": "intra_saude",
             "type": "boolean",
-            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
-            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
+            "title": "Intraorçamentária de saúde",
+            "description": "Indica se a despesa corresponde a uma operação intraorçamentária de Ações e Serviços Públicos de Saúde (ASPS).\nA LC 141/2012, que regulamenta o art. 198, § 2º da CF/88, determina que as despesas com ASPS sejam financiadas com recursos movimentados por meio dos fundos de saúde.\nDesde 2014, o Estado de Minas Gerais operacionaliza esse processo por meio de operações intraorçamentárias, com transação via Fundo Estadual de Saúde de toda a despesa executada pelas entidades da Administração Indireta.\nAssume `True` quando a despesa se enquadra nessa situação e `False` caso contrário.\n",
             "constraints": {
               "required": true
             }
           },
           {
-            "name": "intra_saude",
+            "name": "asps",
             "type": "boolean",
-            "title": "Intraorçamentária de saúde",
-            "description": "Indica se a despesa corresponde a uma operação intraorçamentária de Ações e Serviços Públicos de Saúde (ASPS).\nA LC 141/2012, que regulamenta o art. 198, § 2º da CF/88, determina que as despesas com ASPS sejam financiadas com recursos movimentados por meio dos fundos de saúde.\nDesde 2014, o Estado de Minas Gerais operacionaliza esse processo por meio de operações intraorçamentárias, com transação via Fundo Estadual de Saúde de toda a despesa executada pelas entidades da Administração Indireta.\nAssume `True` quando a despesa se enquadra nessa situação e `False` caso contrário.\n",
+            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
+            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
             "constraints": {
               "required": true
             }
@@ -340,10 +340,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:a87d0459df2a364db84a24b5ed08f8730254422bcd51ac66d00936c406c366e1",
-      "bytes": 834263,
+      "hash": "sha256:5964307d61b485e9dc03df5881dc708acdcd4214f9671e1ef274fc71c3cde2f3",
+      "bytes": 836089,
       "fields": 29,
-      "rows": 34617,
+      "rows": 34695,
       "schema": {
         "fields": [
           {
@@ -629,10 +629,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:1e60fdeecfe55e15b544e176e0ac0fa5bddf0b7e4ef6263159d67111a65bd27c",
-      "bytes": 174551,
+      "hash": "sha256:0311473e53c43660976fdb557ac2cb11637010342c64b61f5a401d5aa9c3a1da",
+      "bytes": 175541,
       "fields": 27,
-      "rows": 3313,
+      "rows": 3317,
       "schema": {
         "fields": [
           {
@@ -895,10 +895,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:683f1d7780645080961c6da03e6f1958e1f16e8c9abbf5679912e504481fd5bf",
-      "bytes": 75626994,
+      "hash": "sha256:d78f540534e9b9d0efa3ff4a7d7fec1cced892bb22e55513e407f76333090379",
+      "bytes": 75978443,
       "fields": 45,
-      "rows": 993981,
+      "rows": 998165,
       "schema": {
         "fields": [
           {
@@ -1320,8 +1320,8 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:8f515e2475ef5c08ede2af30a6fb7cd84fdefce2886ff7d09659d790a6d90cf3",
-      "bytes": 6102,
+      "hash": "sha256:f579b079665d87400c4b52c3244bd3cd36d2cd15b1a839c8a94bb85c23b436d9",
+      "bytes": 6107,
       "fields": 27,
       "rows": 265,
       "schema": {
@@ -1596,10 +1596,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:ee207b13ecb75e9607d1826a4156c92f8812e9536bb14a0c4e53642d015b4cef",
-      "bytes": 312871,
+      "hash": "sha256:75e1cabfa44d2c7110f155ee1f16090e6fe2e773d033b1ca23a721eb08d12c72",
+      "bytes": 314951,
       "fields": 32,
-      "rows": 8554,
+      "rows": 8602,
       "schema": {
         "fields": [
           {
@@ -1891,10 +1891,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:34192126cd44cbeda87e5cb861f32bd14d1bb238812f7dd71d5ed358ff2fc21e",
-      "bytes": 11033207,
+      "hash": "sha256:a570102844dbcf1a456a6de5c2c4e27d163bca2f63525b63f453f3fc5be68d56",
+      "bytes": 12419844,
       "fields": 55,
-      "rows": 219974,
+      "rows": 220249,
       "schema": {
         "fields": [
           {
@@ -2394,7 +2394,7 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:17219deffc996fac1f6da80e7153748fce7c88fa0f40076cf7a7045d8e25f588",
+      "hash": "sha256:941d43b1b10bf7a87fba21c4b2d574fbcb3a509274c6db8fc769441616899159",
       "bytes": 15281,
       "fields": 22,
       "rows": 801,
@@ -2633,5 +2633,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-10T10:11:27"
+  "updated_at": "2026-11-11T12:41:04"
 }

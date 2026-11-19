@@ -11,10 +11,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:cda1589224777e1282589906511647d32704f1e8709d11fcb969026260be0a42",
-      "bytes": 347076,
+      "hash": "sha256:c4f8fd32005f2efdb57ac418f3e2d0d25de9c8e197d91b4cf36864682bbcecea",
+      "bytes": 354560,
       "fields": 34,
-      "rows": 7616,
+      "rows": 7800,
       "schema": {
         "fields": [
           {
@@ -311,19 +311,19 @@
             "description": "Valor total, em reais, correspondente ao somatório dos créditos disponíveis para a execução da despesa.\n"
           },
           {
-            "name": "intra_saude",
+            "name": "asps",
             "type": "boolean",
-            "title": "Intraorçamentária de saúde",
-            "description": "Indica se a despesa corresponde a uma operação intraorçamentária de Ações e Serviços Públicos de Saúde (ASPS).\nA LC 141/2012, que regulamenta o art. 198, § 2º da CF/88, determina que as despesas com ASPS sejam financiadas com recursos movimentados por meio dos fundos de saúde.\nDesde 2014, o Estado de Minas Gerais operacionaliza esse processo por meio de operações intraorçamentárias, com transação via Fundo Estadual de Saúde de toda a despesa executada pelas entidades da Administração Indireta.\nAssume `True` quando a despesa se enquadra nessa situação e `False` caso contrário.\n",
+            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
+            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
             "constraints": {
               "required": true
             }
           },
           {
-            "name": "asps",
+            "name": "intra_saude",
             "type": "boolean",
-            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
-            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
+            "title": "Intraorçamentária de saúde",
+            "description": "Indica se a despesa corresponde a uma operação intraorçamentária de Ações e Serviços Públicos de Saúde (ASPS).\nA LC 141/2012, que regulamenta o art. 198, § 2º da CF/88, determina que as despesas com ASPS sejam financiadas com recursos movimentados por meio dos fundos de saúde.\nDesde 2014, o Estado de Minas Gerais operacionaliza esse processo por meio de operações intraorçamentárias, com transação via Fundo Estadual de Saúde de toda a despesa executada pelas entidades da Administração Indireta.\nAssume `True` quando a despesa se enquadra nessa situação e `False` caso contrário.\n",
             "constraints": {
               "required": true
             }
@@ -340,10 +340,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:8a0da159a447eceae1c7d6d9c20e1d21755c8f6c03c6310e0383b619f669e8ce",
-      "bytes": 848814,
+      "hash": "sha256:7e6a8ce681aba1cc40806f6f462e03c86280e0e9e8c94b462a777e567520ec5c",
+      "bytes": 850853,
       "fields": 29,
-      "rows": 35336,
+      "rows": 35415,
       "schema": {
         "fields": [
           {
@@ -629,10 +629,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:38365f7585da0de56782541845f8455580bacac2c356a9ead4a48d2e8672adca",
-      "bytes": 175800,
+      "hash": "sha256:0143901cb9a8b324f3e9a74930067d0cd4cc3a46d8a37169af4707eab535c5ff",
+      "bytes": 175277,
       "fields": 27,
-      "rows": 3324,
+      "rows": 3342,
       "schema": {
         "fields": [
           {
@@ -895,10 +895,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:e37e4534570c7cd1ed27a4f7a03793dbea6cafdbb57f2e8ebc2959d07ad7a5d0",
-      "bytes": 78937038,
+      "hash": "sha256:ac40d8fb2eda925a0fa398913be78e5f7481d16f4d95b09990ebc5eb4daf1bee",
+      "bytes": 77822882,
       "fields": 45,
-      "rows": 1017633,
+      "rows": 1020491,
       "schema": {
         "fields": [
           {
@@ -1320,8 +1320,8 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:30c83df65c1f6e4864402a82c22655b02b7fb4074c51780dd734aef9f97e428a",
-      "bytes": 6221,
+      "hash": "sha256:4f77ef3b376c978c32a94deac9f6a11fc99e865bb56922b0d4d89192d5fda48c",
+      "bytes": 6228,
       "fields": 27,
       "rows": 269,
       "schema": {
@@ -1596,10 +1596,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:3da45b74602504048ab4a0c83a4190185b5ec3a0f559bcfecc53b0d8922f6b4d",
-      "bytes": 318186,
+      "hash": "sha256:ffd06899910ebdad1912455278e979aeb96a1b88d427debc0423950630f7ae60",
+      "bytes": 318814,
       "fields": 32,
-      "rows": 8689,
+      "rows": 8703,
       "schema": {
         "fields": [
           {
@@ -1891,10 +1891,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:6f75cc34e4454f55f88f872347094015ec926e86e5ec70d85b536870caabdb0d",
-      "bytes": 11087144,
+      "hash": "sha256:27be187622ce1f66efac5b73537e5f9721e25d395510c0767e3e873a740def7a",
+      "bytes": 11100405,
       "fields": 55,
-      "rows": 220989,
+      "rows": 221088,
       "schema": {
         "fields": [
           {
@@ -2394,8 +2394,8 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:36104fe576860df4f49d3d47c68cb69460a8cc2ac8f2c6f2cbf3b3ae676ccb49",
-      "bytes": 15316,
+      "hash": "sha256:99c26140a023d9d6b16bf58d91a9988813e0065e418f3b9f2296af112227f859",
+      "bytes": 15315,
       "fields": 22,
       "rows": 802,
       "schema": {
@@ -2633,5 +2633,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-18T13:56:08"
+  "updated_at": "2026-11-19T14:21:40"
 }

@@ -11,10 +11,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:734242a4c39d339f42eaf93be34395665c07d7c8daa6f489f86832be2eaef443",
-      "bytes": 358148,
+      "hash": "sha256:1213819b3fb78b8762318d770db3a242ce2deab84de58fefe1ccb36ace48859f",
+      "bytes": 358975,
       "fields": 34,
-      "rows": 7882,
+      "rows": 7896,
       "schema": {
         "fields": [
           {
@@ -311,19 +311,19 @@
             "description": "Valor total, em reais, correspondente ao somatório dos créditos disponíveis para a execução da despesa.\n"
           },
           {
-            "name": "asps",
+            "name": "intra_saude",
             "type": "boolean",
-            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
-            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
+            "title": "Intraorçamentária de saúde",
+            "description": "Indica se a despesa corresponde a uma operação intraorçamentária de Ações e Serviços Públicos de Saúde (ASPS).\nA LC 141/2012, que regulamenta o art. 198, § 2º da CF/88, determina que as despesas com ASPS sejam financiadas com recursos movimentados por meio dos fundos de saúde.\nDesde 2014, o Estado de Minas Gerais operacionaliza esse processo por meio de operações intraorçamentárias, com transação via Fundo Estadual de Saúde de toda a despesa executada pelas entidades da Administração Indireta.\nAssume `True` quando a despesa se enquadra nessa situação e `False` caso contrário.\n",
             "constraints": {
               "required": true
             }
           },
           {
-            "name": "intra_saude",
+            "name": "asps",
             "type": "boolean",
-            "title": "Intraorçamentária de saúde",
-            "description": "Indica se a despesa corresponde a uma operação intraorçamentária de Ações e Serviços Públicos de Saúde (ASPS).\nA LC 141/2012, que regulamenta o art. 198, § 2º da CF/88, determina que as despesas com ASPS sejam financiadas com recursos movimentados por meio dos fundos de saúde.\nDesde 2014, o Estado de Minas Gerais operacionaliza esse processo por meio de operações intraorçamentárias, com transação via Fundo Estadual de Saúde de toda a despesa executada pelas entidades da Administração Indireta.\nAssume `True` quando a despesa se enquadra nessa situação e `False` caso contrário.\n",
+            "title": "Ações e Serviços Públicos de Saúde (ASPS)",
+            "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
             "constraints": {
               "required": true
             }
@@ -340,10 +340,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:98e9c423de6d9dd2a2ebd2315a8080633d8073404315215b503e0814f9488cd5",
-      "bytes": 857589,
+      "hash": "sha256:66ea2668bd730a871e893e4397b1e2bacb0b240532706143570469fb2746740d",
+      "bytes": 860716,
       "fields": 29,
-      "rows": 35730,
+      "rows": 35851,
       "schema": {
         "fields": [
           {
@@ -629,10 +629,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:dcb0204f280a1e3123f37cbf2a1e7b14e351234fdfb4ebd1f98f39d85212791e",
-      "bytes": 175252,
+      "hash": "sha256:77230c4b40a360cb9ff1ed9e66eef5b5f1576ada238f19a0867fbde7a33cb67e",
+      "bytes": 177285,
       "fields": 27,
-      "rows": 3347,
+      "rows": 3348,
       "schema": {
         "fields": [
           {
@@ -889,16 +889,16 @@
     {
       "name": "execucao",
       "type": "table",
-      "path": "data/cota.csv.gz",
+      "path": "data/execucao.csv.gz",
       "scheme": "file",
       "format": "csv",
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:98e9c423de6d9dd2a2ebd2315a8080633d8073404315215b503e0814f9488cd5",
-      "bytes": 857589,
-      "fields": 29,
-      "rows": 35730,
+      "hash": "sha256:406a24477575cd77418bc9e6fbb3c99b94892e2ad6e1878eda1a6d46c9fb26aa",
+      "bytes": 78903588,
+      "fields": 45,
+      "rows": 1034593,
       "schema": {
         "fields": [
           {
@@ -912,12 +912,12 @@
             }
           },
           {
-            "name": "poder_cod",
+            "name": "mes_cod",
             "type": "string",
-            "title": "Poder Unidade Orçamentária - Código",
-            "description": "Código indicativo do Poder no qual a unidade orçamentária está incluída.\nRefere-se a designação das orgãos e entidades segregados de acordo com suas funções e atribuições no setor público, a saber:\n(a) Poder Executivo.\n(b) Poder Judiciário.\n(c) Poder Legislativo.\n(d) Ministério Pùblico.\n(e) Tribunal de Contas\n(f) Defensoria Pública.\n",
+            "title": "Mês",
+            "description": "Mês de registro do documento SIAFI\n",
             "constraints": {
-              "pattern": "^[1-6]$"
+              "pattern": "^([1-9]|1[0-4])$"
             }
           },
           {
@@ -955,6 +955,82 @@
             "description": "Código composto dos 4 dígitos do órgão executor e dos 3 dígitos da unidade executora.\n",
             "constraints": {
               "pattern": "^[1-9]\\d{6}$"
+            }
+          },
+          {
+            "name": "upg_cod",
+            "type": "string",
+            "title": "Unidade Programação Gasto - Código",
+            "description": "Código de unidade de programação de gasto relacionado com o código de controle interno da unidade administrativa,\nde acordo com tabela elaborada pela Unidade Orçamentária.\nNão há uma padronização da utilização da UPG por todos os orgãos, alguns utilizam para identificação do centro de custo, outros utilizam para identificar objetos de gasto e outros para identificação das unidades que realizam a despesa.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,3})$"
+            }
+          },
+          {
+            "name": "uo_fin_cod",
+            "type": "string",
+            "title": "Unidade Orçamentária Financiadora Gasto - Código",
+            "description": "Código de unidade orçamentária que financia despesas de outro orgão por meio do repasse da receita arrecadada.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{3})$"
+            }
+          },
+          {
+            "name": "uo_fin_nome",
+            "type": "string"
+          },
+          {
+            "name": "funcao_cod",
+            "type": "string",
+            "title": "Função - Código",
+            "description": "Código identificador do nível máximo de agregação das ações do Governo.\nTem como objetivo consolidar em que áreas de atuação do setor público são gastos os recursos orçamentários, tendo como critério a natureza do objeto da ação.\nPortanto, visa a agregar ações que tenham objetos correlatos.\nUm programa pode ter ações atreladas a distintas funções, assim como uma unidade orçamentária, mas cada ação só pode ter uma única função.\n",
+            "constraints": {
+              "pattern": "^\\d{1,2}$"
+            }
+          },
+          {
+            "name": "funcao_desc",
+            "type": "string",
+            "title": "Função - Descrição",
+            "description": "Descrição do nível máximo de agregação das ações do Governo.\n",
+            "constraints": {
+              "maxLength": 500
+            }
+          },
+          {
+            "name": "subfuncao_cod",
+            "type": "string",
+            "title": "Subfunção - Código",
+            "description": "Código de identificador do detalhamento das áreas de atuação do Governo.\nRepresenta uma partição da função, visando agregar determinado subconjunto de despesas do setor público.\nIdentifica a natureza básica das ações que se aglutinam em torno das funções.\nAs subfunções poderão ser combinadas com funções diferentes daquelas a que estão relacionadas no rol fixado pela Portaria Ministerial n. o 42/99.\nTal como ocorre com a função, o critério que preside a definição da subfunção é a natureza do objeto da ação.\n",
+            "constraints": {
+              "pattern": "^\\d{1,3}$"
+            }
+          },
+          {
+            "name": "subfuncao_desc",
+            "type": "string",
+            "title": "Subfunção - Descrição",
+            "description": "Descrição do detalhamento das áreas de atuação do Governo.\n",
+            "constraints": {
+              "maxLength": 500
+            }
+          },
+          {
+            "name": "programa_cod",
+            "type": "string",
+            "title": "Programa - Código",
+            "description": "Código identificador do objeto concreto, bem ou serviço que se quer atingir.\nO programa representa uma política pública que visa o enfrentamento de um problema ou oportunidade, sendo mensurado por indicadores.\n",
+            "constraints": {
+              "pattern": "^\\d{1,3}$"
+            }
+          },
+          {
+            "name": "programa_desc",
+            "type": "string",
+            "title": "Programa - Descrição",
+            "description": "Descrição do objetivo contreto, bem ou serviço que se quer atingir.\n",
+            "constraints": {
+              "maxLength": 500
             }
           },
           {
@@ -1097,71 +1173,131 @@
             }
           },
           {
-            "name": "data_registro_cota",
-            "type": "datetime",
-            "title": "Data Registro Documento Aprovação Cota",
-            "description": "Data completa de registro do documento de aprovação de cota orçamentária.\n",
-            "format": "%Y/%m/%d %H:%M:%S",
-            "constraints": {
-              "minimum": "2002/01/01 00:00:00"
-            }
-          },
-          {
-            "name": "operador_registro",
+            "name": "elemento_dea_cod",
             "type": "string",
-            "title": "Operador - Registro",
-            "description": "Operador de registro da aprovação de cota no SIAFI-MG.\n",
+            "title": "Elemento Origem DEA",
+            "description": "Identifica o elemento de despesa origem de Despesa de Exercício Anterior.\n",
             "constraints": {
-              "pattern": "^[A-Z0-9]{7,8}$"
+              "pattern": "^(0|[1-9]\\d{0,1})$"
             }
           },
           {
-            "name": "operador_cancelamento",
+            "name": "item_dea_cod",
             "type": "string",
-            "title": "Operador - Cancelamento",
-            "description": "Operador de cancelamento da aprovação de cota no SIAFI-MG.\n",
+            "title": "Item Origem DEA",
+            "description": "Identifica o item de despesa origem de Despesa de Exercício Anterior.\n",
             "constraints": {
-              "pattern": "^[A-Z0-9]{7,8}$"
+              "pattern": "^(0|[1-9]\\d{0,1})$"
             }
           },
           {
-            "name": "documento_aprovacao_cota",
+            "name": "num_processo_compra",
             "type": "string",
-            "title": "Documento Aprovação Cota",
-            "description": "Número do documento de aprovação da cota orçamentária.\n",
+            "title": "Número Processo Compra SIAD",
+            "description": "Número de identificação formatado do processo de compra SIAD.\n",
+            "missingValues": [
+              " /"
+            ],
             "constraints": {
-              "pattern": "^[1-9]\\d{0,6}$"
+              "pattern": "^\\d{7}\\s\\d{6}/\\d{4}$"
             }
           },
           {
-            "name": "vlr_cota_aprovada",
-            "type": "number",
-            "title": "Valor Cota Aprovada",
-            "description": "Valor, em reais, da cota aprovada.\n"
-          },
-          {
-            "name": "vlr_cota_cancelada",
-            "type": "number",
-            "title": "Valor Cota Cancelada",
-            "description": "Valor, em reais, da cota aprovada cancelada.\n",
+            "name": "licitacao_modalidade",
+            "type": "string",
+            "title": "Licitação - Descrição da Modalidade",
+            "description": "Descrição da forma de licitação efetivada de acordo com o SIAFI-MG.\n",
             "constraints": {
-              "minimum": 0
+              "maxLength": 500
             }
           },
           {
-            "name": "vlr_cota_anulada",
-            "type": "number",
-            "title": "Valor Anulação Cota Aprovada",
-            "description": "Valor anulado da cota aprovada, em reais.\n",
+            "name": "cnpj_cpf_formatado",
+            "type": "string",
+            "title": "CNPJ/CPF Credor - Formatado",
+            "description": "Código formatado do CNPJ ou CPF do credor.\n",
+            "missingValues": [
+              "0",
+              "99999999999999"
+            ],
             "constraints": {
-              "minimum": 0
+              "pattern": "^(\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}[/-]\\d{2}|CPF:[0-9a-f]{32})$"
             }
           },
           {
-            "name": "vlr_cota_aprovada_liquida",
+            "name": "razao_social_credor",
+            "type": "string",
+            "title": "Razão Social Credor",
+            "description": "Razão social do credor.\n",
+            "constraints": {
+              "maxLength": 500
+            }
+          },
+          {
+            "name": "num_contrato_saida",
+            "type": "string",
+            "title": "Contrato/Convênio Saída",
+            "description": "Número atribuído pelo SIAFI-MG ao contrato/convênio de saída cadastrado no subsistema Rotina Administrativa.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,6})$"
+            }
+          },
+          {
+            "name": "num_contrato_entrada",
+            "type": "string",
+            "title": "Contrato/Convênio Entrada",
+            "description": "Número atribuído pelo SIAFI-MG ao contrato/convênio de entrada cadastrado no subsistema Rotina Administrativa.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,6})$"
+            }
+          },
+          {
+            "name": "num_obra",
+            "type": "string",
+            "title": "Número Obra",
+            "description": "Número da obra associada ao contrato/convênio de obra.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,6})$"
+            }
+          },
+          {
+            "name": "num_empenho",
+            "type": "string",
+            "title": "Número Empenho",
+            "description": "Número do documento de empenho.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,5})$"
+            }
+          },
+          {
+            "name": "vlr_empenhado",
             "type": "number",
-            "title": "Valor Cota Aprovada Líquida",
-            "description": "Valor líquido, em reais, da cota aprovada.\n"
+            "title": "Valor Despesa Empenhada",
+            "description": "Valor líquido, em reais, da despesa empenhada.\n"
+          },
+          {
+            "name": "vlr_liquidado",
+            "type": "number",
+            "title": "Valor Despesa Liquidada",
+            "description": "Valor total da despesa liquidada, em reais.\n"
+          },
+          {
+            "name": "vlr_liquidado_retido",
+            "type": "number",
+            "title": "Valor Liquidado Retido",
+            "description": "Valor, em reais, referente às retenções - parte da liquidação a favor de terceiros,\nindicado apenas para análise de um documento de liquidação específico.\n"
+          },
+          {
+            "name": "vlr_pago_orcamentario",
+            "type": "number",
+            "title": "Valor Pago Orçamentário",
+            "description": "Valor pago, por empenho.\n"
+          },
+          {
+            "name": "vlr_pago_financeiro",
+            "type": "number",
+            "title": "Valor Pago Financeiro",
+            "description": "Valor referente aos pagamentos efetuados através de movimentações bancárias, escriturais e apropriação contábil da despesa.\nEsse cálculo não inclui valor de anulação de despesa paga.\n"
           },
           {
             "name": "asps",
@@ -1178,16 +1314,16 @@
     {
       "name": "execucao_alem_credito",
       "type": "table",
-      "path": "data/cota.csv.gz",
+      "path": "data/execucao_alem_credito.csv.gz",
       "scheme": "file",
       "format": "csv",
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:98e9c423de6d9dd2a2ebd2315a8080633d8073404315215b503e0814f9488cd5",
-      "bytes": 857589,
-      "fields": 29,
-      "rows": 35730,
+      "hash": "sha256:9779d9d8f90936b62b0445d5bbc1d0a35d5ecbfcf3b29166e9072297ddb40a5e",
+      "bytes": 6490,
+      "fields": 27,
+      "rows": 274,
       "schema": {
         "fields": [
           {
@@ -1201,12 +1337,30 @@
             }
           },
           {
-            "name": "poder_cod",
+            "name": "mes_cod",
             "type": "string",
-            "title": "Poder Unidade Orçamentária - Código",
-            "description": "Código indicativo do Poder no qual a unidade orçamentária está incluída.\nRefere-se a designação das orgãos e entidades segregados de acordo com suas funções e atribuições no setor público, a saber:\n(a) Poder Executivo.\n(b) Poder Judiciário.\n(c) Poder Legislativo.\n(d) Ministério Pùblico.\n(e) Tribunal de Contas\n(f) Defensoria Pública.\n",
+            "title": "Mês",
+            "description": "Mês de registro do documento SIAFI\n",
             "constraints": {
-              "pattern": "^[1-6]$"
+              "pattern": "^([1-9]|1[0-4])$"
+            }
+          },
+          {
+            "name": "mes_regularizacao",
+            "type": "string",
+            "title": "Mês Regularização",
+            "description": "Mês numérico de cancelamento de regularização.\n",
+            "constraints": {
+              "pattern": "^([1-9]|1[0-2])$"
+            }
+          },
+          {
+            "name": "mes_registro",
+            "type": "string",
+            "title": "Mês Registro Documento Despesa Pendente",
+            "description": "Mês numérico de registro do documento de despesa de pessoal pendente de crédito.\n",
+            "constraints": {
+              "pattern": "^([1-9]|1[0-2])$"
             }
           },
           {
@@ -1238,12 +1392,21 @@
             }
           },
           {
-            "name": "ue_cod",
+            "name": "funcao_cod",
             "type": "string",
-            "title": "Unidade Executora - Código",
-            "description": "Código composto dos 4 dígitos do órgão executor e dos 3 dígitos da unidade executora.\n",
+            "title": "Função - Código",
+            "description": "Código identificador do nível máximo de agregação das ações do Governo.\nTem como objetivo consolidar em que áreas de atuação do setor público são gastos os recursos orçamentários, tendo como critério a natureza do objeto da ação.\nPortanto, visa a agregar ações que tenham objetos correlatos.\nUm programa pode ter ações atreladas a distintas funções, assim como uma unidade orçamentária, mas cada ação só pode ter uma única função.\n",
             "constraints": {
-              "pattern": "^[1-9]\\d{6}$"
+              "pattern": "^\\d{1,2}$"
+            }
+          },
+          {
+            "name": "funcao_desc",
+            "type": "string",
+            "title": "Função - Descrição",
+            "description": "Descrição do nível máximo de agregação das ações do Governo.\n",
+            "constraints": {
+              "maxLength": 500
             }
           },
           {
@@ -1386,71 +1549,31 @@
             }
           },
           {
-            "name": "data_registro_cota",
-            "type": "datetime",
-            "title": "Data Registro Documento Aprovação Cota",
-            "description": "Data completa de registro do documento de aprovação de cota orçamentária.\n",
-            "format": "%Y/%m/%d %H:%M:%S",
-            "constraints": {
-              "minimum": "2002/01/01 00:00:00"
-            }
-          },
-          {
-            "name": "operador_registro",
-            "type": "string",
-            "title": "Operador - Registro",
-            "description": "Operador de registro da aprovação de cota no SIAFI-MG.\n",
-            "constraints": {
-              "pattern": "^[A-Z0-9]{7,8}$"
-            }
-          },
-          {
-            "name": "operador_cancelamento",
-            "type": "string",
-            "title": "Operador - Cancelamento",
-            "description": "Operador de cancelamento da aprovação de cota no SIAFI-MG.\n",
-            "constraints": {
-              "pattern": "^[A-Z0-9]{7,8}$"
-            }
-          },
-          {
-            "name": "documento_aprovacao_cota",
-            "type": "string",
-            "title": "Documento Aprovação Cota",
-            "description": "Número do documento de aprovação da cota orçamentária.\n",
-            "constraints": {
-              "pattern": "^[1-9]\\d{0,6}$"
-            }
-          },
-          {
-            "name": "vlr_cota_aprovada",
+            "name": "vlr_alem_credito",
             "type": "number",
-            "title": "Valor Cota Aprovada",
-            "description": "Valor, em reais, da cota aprovada.\n"
-          },
-          {
-            "name": "vlr_cota_cancelada",
-            "type": "number",
-            "title": "Valor Cota Cancelada",
-            "description": "Valor, em reais, da cota aprovada cancelada.\n",
+            "title": "Valor Além Crédito",
+            "description": "Valor, em reais, da despesa de pessoal pendente de regularização por falta de crédito orçamentário.\n",
             "constraints": {
               "minimum": 0
             }
           },
           {
-            "name": "vlr_cota_anulada",
+            "name": "vlr_regularizado",
             "type": "number",
-            "title": "Valor Anulação Cota Aprovada",
-            "description": "Valor anulado da cota aprovada, em reais.\n",
+            "title": "Valor Regularizado",
+            "description": "Valor, em reais, da parte regularizada da despesa de pessoal pendente de regularização por falta de crédito orçamentário.\n",
             "constraints": {
               "minimum": 0
             }
           },
           {
-            "name": "vlr_cota_aprovada_liquida",
+            "name": "vlr_anulado",
             "type": "number",
-            "title": "Valor Cota Aprovada Líquida",
-            "description": "Valor líquido, em reais, da cota aprovada.\n"
+            "title": "Valor Anulado",
+            "description": "Valor, em reais, da parte anulada da despesa de pessoal pendente de regularização por falta de crédito orçamentário.\n",
+            "constraints": {
+              "minimum": 0
+            }
           },
           {
             "name": "asps",
@@ -1467,16 +1590,16 @@
     {
       "name": "receita",
       "type": "table",
-      "path": "data/cota.csv.gz",
+      "path": "data/receita.csv.gz",
       "scheme": "file",
       "format": "csv",
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:98e9c423de6d9dd2a2ebd2315a8080633d8073404315215b503e0814f9488cd5",
-      "bytes": 857589,
-      "fields": 29,
-      "rows": 35730,
+      "hash": "sha256:6e33fbd8fe87c66ab9c7e2f099fabc5d8ee507bad5e5902dbf3658878a7af3c2",
+      "bytes": 320047,
+      "fields": 32,
+      "rows": 8731,
       "schema": {
         "fields": [
           {
@@ -1490,12 +1613,12 @@
             }
           },
           {
-            "name": "poder_cod",
+            "name": "mes_cod",
             "type": "string",
-            "title": "Poder Unidade Orçamentária - Código",
-            "description": "Código indicativo do Poder no qual a unidade orçamentária está incluída.\nRefere-se a designação das orgãos e entidades segregados de acordo com suas funções e atribuições no setor público, a saber:\n(a) Poder Executivo.\n(b) Poder Judiciário.\n(c) Poder Legislativo.\n(d) Ministério Pùblico.\n(e) Tribunal de Contas\n(f) Defensoria Pública.\n",
+            "title": "Mês",
+            "description": "Mês de registro do documento SIAFI\n",
             "constraints": {
-              "pattern": "^[1-6]$"
+              "pattern": "^([1-9]|1[0-4])$"
             }
           },
           {
@@ -1527,95 +1650,6 @@
             }
           },
           {
-            "name": "ue_cod",
-            "type": "string",
-            "title": "Unidade Executora - Código",
-            "description": "Código composto dos 4 dígitos do órgão executor e dos 3 dígitos da unidade executora.\n",
-            "constraints": {
-              "pattern": "^[1-9]\\d{6}$"
-            }
-          },
-          {
-            "name": "acao_cod",
-            "type": "string",
-            "title": "Ação - Código",
-            "description": "Código identificador do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental (atividade).\n",
-            "missingValues": [
-              "0",
-              ""
-            ],
-            "constraints": {
-              "pattern": "^[1-9]\\d{3}$"
-            }
-          },
-          {
-            "name": "acao_desc",
-            "type": "string",
-            "title": "Ação - Descrição",
-            "description": "Descrição do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "grupo_cod",
-            "type": "string",
-            "title": "Grupo Despesa - Código",
-            "description": "Código do grupo de natureza econômica da despesa.\nConsiste na agregação de elementos de despesa que apresentam as mesmas características quanto ao objeto do gasto.\nA Portaria Interministerial STN/SOF n.o 163/01 definiu como grupos de despesa: (1) pessoal e encargos sociais, (2) juros e encargos da dívida, (3) outras despesas correntes, (4) investimentos, (5) inversões financeiras e (6) amortização da dívida.\n",
-            "constraints": {
-              "pattern": "^([0-6]|9)$"
-            }
-          },
-          {
-            "name": "grupo_desc",
-            "type": "string",
-            "title": "Grupo Despesa - Descrição",
-            "description": "Descrição do grupo de natureza econômica da despesa.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "modalidade_cod",
-            "type": "string",
-            "title": "Modalidade Aplicação - Código",
-            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
-            "missingValues": [
-              "0",
-              ""
-            ],
-            "constraints": {
-              "pattern": "^\\d{2}$"
-            }
-          },
-          {
-            "name": "modalidade_desc",
-            "type": "string",
-            "title": "Modalidade Aplicação - Descrição",
-            "description": "Classificação da natureza da despesa que traduz a forma como os recursos serão aplicados pelos órgãos/entidades.\nPode ser diretamente pelos mesmos ou sob a forma de transferências a outras entidades públicas ou privadas que se encarregarão da execução das ações.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "iag_cod",
-            "type": "string",
-            "title": "Identificador Orçamento - Código",
-            "description": "Código do identificador do orçamento conforme o SIAFI-MG.\n",
-            "constraints": {
-              "pattern": "^[0-7]$"
-            }
-          },
-          {
-            "name": "iag_desc",
-            "type": "string",
-            "title": "Identificador Orçamento - Descrição",
-            "description": ".\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
             "name": "fonte_cod",
             "type": "string",
             "title": "Fonte Recurso - Código",
@@ -1635,117 +1669,212 @@
             }
           },
           {
-            "name": "ipu_cod",
+            "name": "receita_cod",
             "type": "string",
-            "title": "Procedência - Código",
-            "description": "Código identificador da procedência dos recursos.\nIdentifica a origem e a utilização dos recursos.\nO identificador de procedência e uso (IPU) informa, dentre outros, se os recursos serão para livre utilização, se foram transferidos de outra unidade orçamentária, se objetivam oferecer contrapartida a convênios, acordos e ajustes, se voltam para o financiamento de inativos do FFP ou ainda se referem-se aos investimentos do Propag.\n",
+            "title": "Classificação Receita - Código",
+            "description": "Código da classificação da receita.\n",
             "constraints": {
-              "pattern": "^\\d{1}$"
+              "required": true,
+              "pattern": "^(0|[1-9]\\d{9,12}|[1-9]\\.[1-9]\\.[1-9]\\.[1-9]\\.\\d{2}\\.\\d\\.[1-9]\\.\\d{2}\\.\\d{3})$"
             }
           },
           {
-            "name": "ipu_desc",
+            "name": "receita_desc",
             "type": "string",
-            "title": "Procedência - Descrição",
-            "description": "Descrição da procedência dos recursos financeiros.\n",
+            "title": "Classificação Receita - Descrição",
+            "description": "Descrição da Classificação da Receita.\n",
             "constraints": {
               "maxLength": 500
             }
           },
           {
-            "name": "elemento_item_cod",
+            "name": "receita_cod_formatado",
             "type": "string",
-            "title": "Elemento Item Despesa Origem - Código",
-            "description": "Código identificador do elemento item de gasto da despesa.\n",
-            "missingValues": [
-              "0",
-              ""
-            ],
+            "title": "Classificação Receita - Formatado",
+            "description": "Código da Classificação Receita Formatado.\n",
             "constraints": {
-              "pattern": "^[1-9]\\d{0,3}$"
+              "pattern": "^(\\d{4}\\.\\d{2}\\.\\d{1}\\.\\d{1}\\.\\d{2}\\.\\d{3}|\\d{1}\\.\\d{1}\\.\\d{1}\\.\\d{1}\\.\\d{2}\\.\\d{2}\\.\\d{2})$"
             }
           },
           {
-            "name": "elemento_item_desc",
-            "type": "string",
-            "title": "Elemento Item Despesa - Descrição",
-            "description": "Descrição do elemento item de despesa.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "data_registro_cota",
-            "type": "datetime",
-            "title": "Data Registro Documento Aprovação Cota",
-            "description": "Data completa de registro do documento de aprovação de cota orçamentária.\n",
-            "format": "%Y/%m/%d %H:%M:%S",
-            "constraints": {
-              "minimum": "2002/01/01 00:00:00"
-            }
-          },
-          {
-            "name": "operador_registro",
-            "type": "string",
-            "title": "Operador - Registro",
-            "description": "Operador de registro da aprovação de cota no SIAFI-MG.\n",
-            "constraints": {
-              "pattern": "^[A-Z0-9]{7,8}$"
-            }
-          },
-          {
-            "name": "operador_cancelamento",
-            "type": "string",
-            "title": "Operador - Cancelamento",
-            "description": "Operador de cancelamento da aprovação de cota no SIAFI-MG.\n",
-            "constraints": {
-              "pattern": "^[A-Z0-9]{7,8}$"
-            }
-          },
-          {
-            "name": "documento_aprovacao_cota",
-            "type": "string",
-            "title": "Documento Aprovação Cota",
-            "description": "Número do documento de aprovação da cota orçamentária.\n",
-            "constraints": {
-              "pattern": "^[1-9]\\d{0,6}$"
-            }
-          },
-          {
-            "name": "vlr_cota_aprovada",
+            "name": "vlr_previsto_inicial",
             "type": "number",
-            "title": "Valor Cota Aprovada",
-            "description": "Valor, em reais, da cota aprovada.\n"
+            "title": "Valor Previsto Inicial",
+            "description": "Valor, em reais, da previsão inicial da receita.\n"
           },
           {
-            "name": "vlr_cota_cancelada",
+            "name": "vlr_previsto_adicional",
             "type": "number",
-            "title": "Valor Cota Cancelada",
-            "description": "Valor, em reais, da cota aprovada cancelada.\n",
-            "constraints": {
-              "minimum": 0
-            }
+            "title": "Valor Previsto Adicional",
+            "description": "Valor, em reais, da previsão adicional da receita.\n"
           },
           {
-            "name": "vlr_cota_anulada",
+            "name": "vlr_previsto_atualizado",
             "type": "number",
-            "title": "Valor Anulação Cota Aprovada",
-            "description": "Valor anulado da cota aprovada, em reais.\n",
-            "constraints": {
-              "minimum": 0
-            }
+            "title": "Valor Previsto Atualizado",
+            "description": "Valor, em reais, da previsão atualizada da receita.\n"
           },
           {
-            "name": "vlr_cota_aprovada_liquida",
+            "name": "vlr_contabilizado",
             "type": "number",
-            "title": "Valor Cota Aprovada Líquida",
-            "description": "Valor líquido, em reais, da cota aprovada.\n"
+            "title": "Valor Contabilizado",
+            "description": "Valor, em reais, da receita orçamentária contabilizada.\nAparece negativo quando houve cancelamento da receita.\n"
+          },
+          {
+            "name": "vlr_efetivado_ajustado",
+            "type": "number",
+            "title": "Valor Efetivado Ajustado",
+            "description": "Valor, em reais, da receita orçamentária efetivada ajustada.\n"
           },
           {
             "name": "asps",
             "type": "boolean",
             "title": "Ações e Serviços Públicos de Saúde (ASPS)",
             "description": "Indica se o registro compõe o cálculo do cumprimento do percentual mínimo de aplicação em Ações e Serviços Públicos de Saúde (ASPS). Para receitas, identifica as que integram a base de cálculo do mínimo. Para despesas, identifica as que podem ser computadas para fins do mínimo constitucional.\nA CF/88 determina que os Estados apliquem anualmente em ASPS recursos mínimos derivados da aplicação de percentuais sobre o produto da arrecadação dos impostos a que se refere o art. 155 e dos recursos de que tratam os arts. 157 e 159, inciso I, alínea a, e inciso II, deduzidas as parcelas transferidas aos Municípios.\nA LC 141/2012 regulamentou a CF/88 e estabeleceu as normas de cálculo do montante mínimo a ser aplicado, bem como o percentual mínimo de 12% ao ano.\nDe 2008 a 2011, as despesas da COPASA foram consideradas no atendimento constitucional. Como essas despesas não constam no orçamento fiscal, não podem ser obtidas nas bases de execução da despesa.\nA partir de 2023, considera-se que toda a despesa para o cumprimento do mínimo deve ser realizada na Fonte 10. Eventuais despesas realizadas na Fonte 15 não são computadas.\nAssume `True` quando o registro se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ibs",
+            "type": "boolean",
+            "title": "Imposto sobre Bens e Serviços (IBS)",
+            "description": "Indica se a receita corresponde à arrecadação do Imposto sobre Bens e Serviços (IBS), instituído pela EC 132/2023 (Reforma Tributária) e regulamentado pela LC 214/2025.\nConsidera a arrecadação bruta, que inclui principal, multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa (naturezas de receita 11165001 a 11165004).\nAplica-se a partir do exercício de 2026.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ibs_acessorias",
+            "type": "boolean",
+            "title": "IBS - Receitas acessórias",
+            "description": "Indica se a receita corresponde às receitas acessórias do Imposto sobre Bens e Serviços (IBS), instituído pela EC 132/2023 (Reforma Tributária) e regulamentado pela LC 214/2025.\nInclui multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa. Não inclui a arrecadação principal (naturezas de receita 11165002 a 11165004).\nAplica-se a partir do exercício de 2026.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ibs_principal",
+            "type": "boolean",
+            "title": "IBS - Principal",
+            "description": "Indica se a receita corresponde à arrecadação principal do Imposto sobre Bens e Serviços (IBS), instituído pela EC 132/2023 (Reforma Tributária) e regulamentado pela LC 214/2025.\nNão inclui multas e juros de mora, dívida ativa nem multas e juros de mora da dívida ativa (natureza de receita 11165001).\nAplica-se a partir do exercício de 2026.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "icms",
+            "type": "boolean",
+            "title": "ICMS - Bruto",
+            "description": "Indica se a receita corresponde à arrecadação bruta do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS).\nInclui principal, multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa, além da parcela destinada ao Fundo de Erradicação da Miséria (FEM).\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "icms_acessorias",
+            "type": "boolean",
+            "title": "ICMS - Receitas acessórias",
+            "description": "Indica se a receita corresponde às receitas acessórias do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS), incluindo a parcela destinada ao Fundo de Erradicação da Miséria (FEM).\nInclui multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa. Não inclui a arrecadação principal.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "icms_principal",
+            "type": "boolean",
+            "title": "ICMS - Principal",
+            "description": "Indica se a receita corresponde à arrecadação principal do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS), incluindo a parcela destinada ao Fundo de Erradicação da Miséria (FEM).\nNão inclui multas e juros de mora, dívida ativa nem multas e juros de mora da dívida ativa.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ipva",
+            "type": "boolean",
+            "title": "IPVA - Bruto",
+            "description": "Indica se a receita corresponde à arrecadação bruta do Imposto sobre a Propriedade de Veículos Automotores (IPVA).\nInclui principal, multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ipva_acessorias",
+            "type": "boolean",
+            "title": "IPVA - Receitas acessórias",
+            "description": "Indica se a receita corresponde às receitas acessórias do Imposto sobre a Propriedade de Veículos Automotores (IPVA).\nInclui multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa. Não inclui a arrecadação principal.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ipva_principal",
+            "type": "boolean",
+            "title": "IPVA - Principal",
+            "description": "Indica se a receita corresponde à arrecadação principal do Imposto sobre a Propriedade de Veículos Automotores (IPVA).\nNão inclui multas e juros de mora, dívida ativa nem multas e juros de mora da dívida ativa.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "irrf",
+            "type": "boolean",
+            "title": "IRRF - Bruto",
+            "description": "Indica se a receita corresponde à arrecadação bruta do Imposto de Renda Retido na Fonte (IRRF) pertencente ao Estado.\nInclui principal, multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa.\nA identificação considera a mudança na codificação das naturezas de receita ocorrida em 2018. Até 2017, apenas a arrecadação principal é identificada.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "irrf_acessorias",
+            "type": "boolean",
+            "title": "IRRF - Receitas acessórias",
+            "description": "Indica se a receita corresponde às receitas acessórias do Imposto de Renda Retido na Fonte (IRRF) pertencente ao Estado.\nInclui multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa. Não inclui a arrecadação principal.\nAplica-se a partir do exercício de 2018.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "irrf_principal",
+            "type": "boolean",
+            "title": "IRRF - Principal",
+            "description": "Indica se a receita corresponde à arrecadação principal do Imposto de Renda Retido na Fonte (IRRF) pertencente ao Estado.\nNão inclui multas e juros de mora, dívida ativa nem multas e juros de mora da dívida ativa.\nA identificação considera a mudança na codificação das naturezas de receita ocorrida em 2018.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "itcd",
+            "type": "boolean",
+            "title": "ITCD - Bruto",
+            "description": "Indica se a receita corresponde à arrecadação bruta do Imposto sobre Transmissão Causa Mortis e Doação de Quaisquer Bens ou Direitos (ITCD).\nInclui principal, multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023. Em 2007, inclui também as naturezas usadas para registrar a cota-parte do FUNDEB, que passou a incluir o ITCD na base de cálculo.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "itcd_acessorias",
+            "type": "boolean",
+            "title": "ITCD - Receitas acessórias",
+            "description": "Indica se a receita corresponde às receitas acessórias do Imposto sobre Transmissão Causa Mortis e Doação de Quaisquer Bens ou Direitos (ITCD).\nInclui multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa. Não inclui a arrecadação principal. Multas e juros de mora da dívida ativa são identificados apenas a partir de 2018.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023. Em 2007, inclui também as naturezas usadas para registrar a cota-parte do FUNDEB.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "itcd_principal",
+            "type": "boolean",
+            "title": "ITCD - Principal",
+            "description": "Indica se a receita corresponde à arrecadação principal do Imposto sobre Transmissão Causa Mortis e Doação de Quaisquer Bens ou Direitos (ITCD).\nNão inclui multas e juros de mora, dívida ativa nem multas e juros de mora da dívida ativa.\nA identificação considera as mudanças na codificação das naturezas de receita ocorridas em 2018 e 2023. Em 2007, inclui também a natureza usada para registrar a cota-parte do FUNDEB.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "impostos",
+            "type": "boolean",
+            "title": "Impostos - Bruto",
+            "description": "Indica se a receita corresponde à arrecadação bruta de impostos do Estado.\nConsidera os seguintes impostos:\n- Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS);\n- Imposto sobre a Propriedade de Veículos Automotores (IPVA);\n- Imposto sobre Transmissão Causa Mortis e Doação de Quaisquer Bens ou Direitos (ITCD);\n- Imposto de Renda Retido na Fonte (IRRF) pertencente ao Estado;\n- Imposto sobre Bens e Serviços (IBS), a partir de 2026.\nInclui principal, multas e juros de mora, dívida ativa e multas e juros de mora da dívida ativa.\nO cálculo é igual ao publicado nos Relatórios Resumidos da Execução Orçamentária (RREO) de 2014 a 2018. Os RREO de 2014 a 2017 discriminam apenas a arrecadação principal de cada imposto. A partir de 2018, consideram a arrecadação bruta.\nAssume `True` quando a receita se enquadra nessa situação e `False` caso contrário.\n",
             "constraints": {
               "required": true
             }
@@ -1756,16 +1885,16 @@
     {
       "name": "restos_pagar",
       "type": "table",
-      "path": "data/cota.csv.gz",
+      "path": "data/restos_pagar.csv.gz",
       "scheme": "file",
       "format": "csv",
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:98e9c423de6d9dd2a2ebd2315a8080633d8073404315215b503e0814f9488cd5",
-      "bytes": 857589,
-      "fields": 29,
-      "rows": 35730,
+      "hash": "sha256:f1ac8d21fb2a6579bc653161695b3d893dac7e7ac4be3fcc44ed80d97f9c7c53",
+      "bytes": 12499646,
+      "fields": 55,
+      "rows": 221531,
       "schema": {
         "fields": [
           {
@@ -1779,12 +1908,21 @@
             }
           },
           {
-            "name": "poder_cod",
+            "name": "ano_rp",
             "type": "string",
-            "title": "Poder Unidade Orçamentária - Código",
-            "description": "Código indicativo do Poder no qual a unidade orçamentária está incluída.\nRefere-se a designação das orgãos e entidades segregados de acordo com suas funções e atribuições no setor público, a saber:\n(a) Poder Executivo.\n(b) Poder Judiciário.\n(c) Poder Legislativo.\n(d) Ministério Pùblico.\n(e) Tribunal de Contas\n(f) Defensoria Pública.\n",
+            "title": "Ano Origem Restos a Pagar",
+            "description": "Ano de origem do documento de Restos a Pagar.\n",
             "constraints": {
-              "pattern": "^[1-6]$"
+              "pattern": "^[1-2]\\d{3}$"
+            }
+          },
+          {
+            "name": "mes_cod",
+            "type": "string",
+            "title": "Mês",
+            "description": "Mês de registro do documento SIAFI\n",
+            "constraints": {
+              "pattern": "^([1-9]|1[0-4])$"
             }
           },
           {
@@ -1822,6 +1960,46 @@
             "description": "Código composto dos 4 dígitos do órgão executor e dos 3 dígitos da unidade executora.\n",
             "constraints": {
               "pattern": "^[1-9]\\d{6}$"
+            }
+          },
+          {
+            "name": "uo_fin_cod",
+            "type": "string",
+            "title": "Unidade Orçamentária Financiadora Gasto - Código",
+            "description": "Código de unidade orçamentária que financia despesas de outro orgão por meio do repasse da receita arrecadada.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{3})$"
+            }
+          },
+          {
+            "name": "uo_fin_nome",
+            "type": "string"
+          },
+          {
+            "name": "upg_cod",
+            "type": "string",
+            "title": "Unidade Programação Gasto - Código",
+            "description": "Código de unidade de programação de gasto relacionado com o código de controle interno da unidade administrativa,\nde acordo com tabela elaborada pela Unidade Orçamentária.\nNão há uma padronização da utilização da UPG por todos os orgãos, alguns utilizam para identificação do centro de custo, outros utilizam para identificar objetos de gasto e outros para identificação das unidades que realizam a despesa.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,3})$"
+            }
+          },
+          {
+            "name": "funcao_cod",
+            "type": "string",
+            "title": "Função - Código",
+            "description": "Código identificador do nível máximo de agregação das ações do Governo.\nTem como objetivo consolidar em que áreas de atuação do setor público são gastos os recursos orçamentários, tendo como critério a natureza do objeto da ação.\nPortanto, visa a agregar ações que tenham objetos correlatos.\nUm programa pode ter ações atreladas a distintas funções, assim como uma unidade orçamentária, mas cada ação só pode ter uma única função.\n",
+            "constraints": {
+              "pattern": "^\\d{1,2}$"
+            }
+          },
+          {
+            "name": "funcao_desc",
+            "type": "string",
+            "title": "Função - Descrição",
+            "description": "Descrição do nível máximo de agregação das ações do Governo.\n",
+            "constraints": {
+              "maxLength": 500
             }
           },
           {
@@ -1942,6 +2120,24 @@
             }
           },
           {
+            "name": "elemento_dea_cod",
+            "type": "string",
+            "title": "Elemento Origem DEA",
+            "description": "Identifica o elemento de despesa origem de Despesa de Exercício Anterior.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
+            "name": "item_dea_cod",
+            "type": "string",
+            "title": "Item Origem DEA",
+            "description": "Identifica o item de despesa origem de Despesa de Exercício Anterior.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,1})$"
+            }
+          },
+          {
             "name": "elemento_item_cod",
             "type": "string",
             "title": "Elemento Item Despesa Origem - Código",
@@ -1964,71 +2160,218 @@
             }
           },
           {
-            "name": "data_registro_cota",
-            "type": "datetime",
-            "title": "Data Registro Documento Aprovação Cota",
-            "description": "Data completa de registro do documento de aprovação de cota orçamentária.\n",
-            "format": "%Y/%m/%d %H:%M:%S",
-            "constraints": {
-              "minimum": "2002/01/01 00:00:00"
-            }
-          },
-          {
-            "name": "operador_registro",
+            "name": "num_empenho",
             "type": "string",
-            "title": "Operador - Registro",
-            "description": "Operador de registro da aprovação de cota no SIAFI-MG.\n",
+            "title": "Número Empenho",
+            "description": "Número do documento de empenho.\n",
             "constraints": {
-              "pattern": "^[A-Z0-9]{7,8}$"
+              "pattern": "^(0|[1-9]\\d{0,5})$"
             }
           },
           {
-            "name": "operador_cancelamento",
+            "name": "cnpj_cpf_formatado",
             "type": "string",
-            "title": "Operador - Cancelamento",
-            "description": "Operador de cancelamento da aprovação de cota no SIAFI-MG.\n",
+            "title": "CNPJ/CPF Credor - Formatado",
+            "description": "Código formatado do CNPJ ou CPF do credor.\n",
+            "missingValues": [
+              "0",
+              "99999999999999"
+            ],
             "constraints": {
-              "pattern": "^[A-Z0-9]{7,8}$"
+              "pattern": "^(\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{3}\\.\\d{3}\\.\\d{3}[/-]\\d{2}|CPF:[0-9a-f]{32})$"
             }
           },
           {
-            "name": "documento_aprovacao_cota",
+            "name": "razao_social_credor",
             "type": "string",
-            "title": "Documento Aprovação Cota",
-            "description": "Número do documento de aprovação da cota orçamentária.\n",
+            "title": "Razão Social Credor",
+            "description": "Razão social do credor.\n",
             "constraints": {
-              "pattern": "^[1-9]\\d{0,6}$"
+              "maxLength": 500
             }
           },
           {
-            "name": "vlr_cota_aprovada",
+            "name": "num_contrato_entrada",
+            "type": "string",
+            "title": "Contrato/Convênio Entrada",
+            "description": "Número atribuído pelo SIAFI-MG ao contrato/convênio de entrada cadastrado no subsistema Rotina Administrativa.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,6})$"
+            }
+          },
+          {
+            "name": "num_contrato_saida",
+            "type": "string",
+            "title": "Contrato/Convênio Saída",
+            "description": "Número atribuído pelo SIAFI-MG ao contrato/convênio de saída cadastrado no subsistema Rotina Administrativa.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,6})$"
+            }
+          },
+          {
+            "name": "num_obra",
+            "type": "string",
+            "title": "Número Obra",
+            "description": "Número da obra associada ao contrato/convênio de obra.\n",
+            "constraints": {
+              "pattern": "^(0|[1-9]\\d{0,6})$"
+            }
+          },
+          {
+            "name": "num_processo_compra",
+            "type": "string",
+            "title": "Número Processo Compra SIAD",
+            "description": "Número de identificação formatado do processo de compra SIAD.\n",
+            "missingValues": [
+              " /"
+            ],
+            "constraints": {
+              "pattern": "^\\d{7}\\s\\d{6}/\\d{4}$"
+            }
+          },
+          {
+            "name": "vlr_inscrito_rpnp",
             "type": "number",
-            "title": "Valor Cota Aprovada",
-            "description": "Valor, em reais, da cota aprovada.\n"
-          },
-          {
-            "name": "vlr_cota_cancelada",
-            "type": "number",
-            "title": "Valor Cota Cancelada",
-            "description": "Valor, em reais, da cota aprovada cancelada.\n",
+            "title": "Valor Inscrito Não Processado",
+            "description": "Valor, em reais, de saldo de empenhos.\n",
             "constraints": {
               "minimum": 0
             }
           },
           {
-            "name": "vlr_cota_anulada",
+            "name": "vlr_cancelado_rpnp",
             "type": "number",
-            "title": "Valor Anulação Cota Aprovada",
-            "description": "Valor anulado da cota aprovada, em reais.\n",
+            "title": "Valor Cancelado Não Processado",
+            "description": "Valor cancelado, em reais, de empenho inscrito em Restos a Pagar não processado.\n",
             "constraints": {
               "minimum": 0
             }
           },
           {
-            "name": "vlr_cota_aprovada_liquida",
+            "name": "vlr_restabelecido_rpnp",
             "type": "number",
-            "title": "Valor Cota Aprovada Líquida",
-            "description": "Valor líquido, em reais, da cota aprovada.\n"
+            "title": "Valor Restabelecido Não Processado",
+            "description": "Valor restabelecido, em reais, de empenho inscrito em Restos a Pagar não processado, cancelado anteriormente.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_despesa_liquidada_rpnp",
+            "type": "number",
+            "title": "Valor Despesa Liquidada",
+            "description": "Valor total, em reais, da despesa liquidada de resto a pagar não processado, registrada no exercício.\n"
+          },
+          {
+            "name": "vlr_despesa_liquidada_pagar",
+            "type": "number",
+            "title": "Valor Despesa Liquidada a Pagar",
+            "description": "Valor total, em reais, do saldo a pagar.\n"
+          },
+          {
+            "name": "vlr_saldo_rpp",
+            "type": "number",
+            "title": "Saldo Restos a Pagar Processado",
+            "description": "Valor, em reais, de saldo a pagar de despesa liquidada inscrita em Restos a Pagar processado.\n"
+          },
+          {
+            "name": "vlr_saldo_rpnp",
+            "type": "number",
+            "title": "Saldo Restos a Pagar Não Processado",
+            "description": "Valor, em reais, de saldo a liquidar de empenhos inscritos em Restos a Pagar não processado.\n"
+          },
+          {
+            "name": "vlr_inscrito_rpp",
+            "type": "number",
+            "title": "Valor Inscrito Processado",
+            "description": "Valor, em reais, de despesa liquidada de exercícios anteriores.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_cancelado_rpp",
+            "type": "number",
+            "title": "Valor Cancelado Processado",
+            "description": "Valor cancelado, em reais, de despesa liquidada inscrita em Restos a Pagar.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_desconto_rpp",
+            "type": "number",
+            "title": "Valor Desconto Processado",
+            "description": "Valor, em reais, de abatimento sobre o valor de pagamento de inscrição em Restos a Pagar processado.\nAtenção: não considera os descontos efetuados em pagamentos de retenção/consignação.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_restabelecido_rpp",
+            "type": "number",
+            "title": "Valor Restabelecido Processado",
+            "description": "Valor restabelecido, em reais, de despesa liquidada inscrita, cancelada anteriormente.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_pago_rpp",
+            "type": "number",
+            "title": "Valor Pago Processado",
+            "description": "Valor pago, em reais, referente a valor inscrito processado, total ou parcial.\nAtenção: não considera os valores pagos de retenção/consignação.\n"
+          },
+          {
+            "name": "vlr_anulacao_pagamento_rpp",
+            "type": "number",
+            "title": "Valor Anulação Pagamento Processado",
+            "description": "Valor, em reais, da anulação da despesa através da devolução, do Pagamento de restos a pagar processado.\n"
+          },
+          {
+            "name": "vlr_retencao_rpp",
+            "type": "number",
+            "title": "Valor Retenção Processado",
+            "description": "Valor restabelecido, em reais, de despesa liquidada inscrita, cancelada anteriormente.\n"
+          },
+          {
+            "name": "vlr_anulacao_retencao_rpp",
+            "type": "number",
+            "title": "Valor Anulação Retenção Processado",
+            "description": "Valor, em reais, de anulação do valor de retenção processado.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_anulacao_pago_antecipado",
+            "type": "number",
+            "title": "Valor Anulação Pago Antecipado",
+            "description": "Valor total, em reais, de anulação de pago antecipado de restos a pagar.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_pago_antecipado_exercicio",
+            "type": "number",
+            "title": "Valor Pago Antecipado Exercício",
+            "description": "Valor Contratual Pago antecipado.\n",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "vlr_pago_rpnp",
+            "type": "number",
+            "title": "Valor Pago Não Processado",
+            "description": "Valor pago, em reais, referente a valor inscrito não processado, total ou parcial.\nAtenção: não considera os valores pagos de retenção/consignação.\n"
+          },
+          {
+            "name": "vlr_retencao_rpnp",
+            "type": "number",
+            "title": "Valor Retenção Não Processado",
+            "description": "Valor, em reais, de Restos a Pagar não processado de Ordem de Pagamento.\n"
           },
           {
             "name": "asps",
@@ -2045,16 +2388,16 @@
     {
       "name": "restos_pagar_folha",
       "type": "table",
-      "path": "data/cota.csv.gz",
+      "path": "data/restos_pagar_folha.csv.gz",
       "scheme": "file",
       "format": "csv",
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:98e9c423de6d9dd2a2ebd2315a8080633d8073404315215b503e0814f9488cd5",
-      "bytes": 857589,
-      "fields": 29,
-      "rows": 35730,
+      "hash": "sha256:2567a650f04d5076fc863b88095f0613291da45a31b689cb021c05e599e1635c",
+      "bytes": 15315,
+      "fields": 22,
+      "rows": 802,
       "schema": {
         "fields": [
           {
@@ -2068,12 +2411,21 @@
             }
           },
           {
-            "name": "poder_cod",
+            "name": "mes_cod",
             "type": "string",
-            "title": "Poder Unidade Orçamentária - Código",
-            "description": "Código indicativo do Poder no qual a unidade orçamentária está incluída.\nRefere-se a designação das orgãos e entidades segregados de acordo com suas funções e atribuições no setor público, a saber:\n(a) Poder Executivo.\n(b) Poder Judiciário.\n(c) Poder Legislativo.\n(d) Ministério Pùblico.\n(e) Tribunal de Contas\n(f) Defensoria Pública.\n",
+            "title": "Mês",
+            "description": "Mês de registro do documento SIAFI\n",
             "constraints": {
-              "pattern": "^[1-6]$"
+              "pattern": "^([1-9]|1[0-4])$"
+            }
+          },
+          {
+            "name": "ano_rp_folha",
+            "type": "string",
+            "title": "Ano Origem Folha Pagamento",
+            "description": "Ano de origem do documento de folha de pagamento inscrita em Restos a Pagar.\n",
+            "constraints": {
+              "pattern": "^[1-2]\\d{3}$"
             }
           },
           {
@@ -2100,37 +2452,6 @@
             "type": "string",
             "title": "Unidade Orçamentária - Nome",
             "description": "Nome completo da Unidade Orçamentária.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "ue_cod",
-            "type": "string",
-            "title": "Unidade Executora - Código",
-            "description": "Código composto dos 4 dígitos do órgão executor e dos 3 dígitos da unidade executora.\n",
-            "constraints": {
-              "pattern": "^[1-9]\\d{6}$"
-            }
-          },
-          {
-            "name": "acao_cod",
-            "type": "string",
-            "title": "Ação - Código",
-            "description": "Código identificador do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental (atividade).\n",
-            "missingValues": [
-              "0",
-              ""
-            ],
-            "constraints": {
-              "pattern": "^[1-9]\\d{3}$"
-            }
-          },
-          {
-            "name": "acao_desc",
-            "type": "string",
-            "title": "Ação - Descrição",
-            "description": "Descrição do conjunto de operações, limitadas no tempo (projeto) ou realizadas de modo contínuo e permanente (atividade)\ndos quais resulta um produto final (projeto) ou necessárias à manutenção da ação governamental.\n",
             "constraints": {
               "maxLength": 500
             }
@@ -2231,93 +2552,43 @@
             }
           },
           {
-            "name": "elemento_item_cod",
-            "type": "string",
-            "title": "Elemento Item Despesa Origem - Código",
-            "description": "Código identificador do elemento item de gasto da despesa.\n",
-            "missingValues": [
-              "0",
-              ""
-            ],
-            "constraints": {
-              "pattern": "^[1-9]\\d{0,3}$"
-            }
-          },
-          {
-            "name": "elemento_item_desc",
-            "type": "string",
-            "title": "Elemento Item Despesa - Descrição",
-            "description": "Descrição do elemento item de despesa.\n",
-            "constraints": {
-              "maxLength": 500
-            }
-          },
-          {
-            "name": "data_registro_cota",
-            "type": "datetime",
-            "title": "Data Registro Documento Aprovação Cota",
-            "description": "Data completa de registro do documento de aprovação de cota orçamentária.\n",
-            "format": "%Y/%m/%d %H:%M:%S",
-            "constraints": {
-              "minimum": "2002/01/01 00:00:00"
-            }
-          },
-          {
-            "name": "operador_registro",
-            "type": "string",
-            "title": "Operador - Registro",
-            "description": "Operador de registro da aprovação de cota no SIAFI-MG.\n",
-            "constraints": {
-              "pattern": "^[A-Z0-9]{7,8}$"
-            }
-          },
-          {
-            "name": "operador_cancelamento",
-            "type": "string",
-            "title": "Operador - Cancelamento",
-            "description": "Operador de cancelamento da aprovação de cota no SIAFI-MG.\n",
-            "constraints": {
-              "pattern": "^[A-Z0-9]{7,8}$"
-            }
-          },
-          {
-            "name": "documento_aprovacao_cota",
-            "type": "string",
-            "title": "Documento Aprovação Cota",
-            "description": "Número do documento de aprovação da cota orçamentária.\n",
-            "constraints": {
-              "pattern": "^[1-9]\\d{0,6}$"
-            }
-          },
-          {
-            "name": "vlr_cota_aprovada",
+            "name": "vlr_inscrito_folha",
             "type": "number",
-            "title": "Valor Cota Aprovada",
-            "description": "Valor, em reais, da cota aprovada.\n"
-          },
-          {
-            "name": "vlr_cota_cancelada",
-            "type": "number",
-            "title": "Valor Cota Cancelada",
-            "description": "Valor, em reais, da cota aprovada cancelada.\n",
+            "title": "Valor Inscrito Folha",
+            "description": "Valor, em reais, da folha de pagamento de exercícios anteriores inscrita em Restos a Pagar.\n",
             "constraints": {
               "minimum": 0
             }
           },
           {
-            "name": "vlr_cota_anulada",
+            "name": "vlr_anulado_folha",
             "type": "number",
-            "title": "Valor Anulação Cota Aprovada",
-            "description": "Valor anulado da cota aprovada, em reais.\n",
+            "title": "Valor Anulado Folha",
+            "description": "Valor anulado, em reais, do saldo da folha de pagamento de exercícios anteriores inscrita em Restos a Pagar - FP.\n",
             "constraints": {
               "minimum": 0
             }
           },
           {
-            "name": "vlr_cota_aprovada_liquida",
+            "name": "vlr_pago_folha",
             "type": "number",
-            "title": "Valor Cota Aprovada Líquida",
-            "description": "Valor líquido, em reais, da cota aprovada.\n"
+            "title": "Valor Pago Folha",
+            "description": "Valor pago, em reais, referente a valor inscrito processado de folha de pagamento, total ou parcial.\n"
+          },
+          {
+            "name": "vlr_despesa_liquidada_pagar_folha",
+            "type": "number",
+            "title": "Valor Despesa Liquidada a Pagar - Folha",
+            "description": "Valor, em reais, do saldo a pagar processado de folha de pagamento.\n"
+          },
+          {
+            "name": "intra_saude",
+            "type": "boolean",
+            "title": "Intraorçamentária de saúde",
+            "description": "Indica se a despesa corresponde a uma operação intraorçamentária de Ações e Serviços Públicos de Saúde (ASPS).\nA LC 141/2012, que regulamenta o art. 198, § 2º da CF/88, determina que as despesas com ASPS sejam financiadas com recursos movimentados por meio dos fundos de saúde.\nDesde 2014, o Estado de Minas Gerais operacionaliza esse processo por meio de operações intraorçamentárias, com transação via Fundo Estadual de Saúde de toda a despesa executada pelas entidades da Administração Indireta.\nAssume `True` quando a despesa se enquadra nessa situação e `False` caso contrário.\n",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "asps",
@@ -2362,5 +2633,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-24T15:43:04"
+  "updated_at": "2026-11-25T15:28:14"
 }
